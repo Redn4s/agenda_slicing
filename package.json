@@ -1,0 +1,16 @@
+{
+	"name": "agenda_slicing",
+	"version": "1.0.0",
+	"description": "Slicing for interactive agenda for Digipolis",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"scss": "node-sass --watch scss -o css"
+	},
+	"author": "Sander Geenen",
+	"devDependencies": {
+		"node-sass": "^4.7.2"
+	},
+	"dependencies": {
+		"@a-ui/core": "github:a-ui/core_branding_scss"
+	}
+}

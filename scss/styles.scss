@@ -1,0 +1,222 @@
+@import "../node_modules/@a-ui/core/src/styles/_quarks.scss";
+
+body {
+	padding: $spacer;
+}
+
+
+/**
+ * AGENDA VARIABLES
+ * -------------------------------------------------------------------
+ */
+
+$agenda-border:                  $border-color !default;
+$agenda-bg:                      $white !default;
+$agenda-bg-hover:                mix($brand-primary, $white, 20%) !default;
+
+$agenda-head-color:              $text-color !default;
+$agenda-head-border:             $agenda-border !default;
+$agenda-head-bg:                 $agenda-bg !default;
+
+$agenda-today-color:             $brand-primary !default;
+$agenda-today-bg:                mix($agenda-today-color, $white, 20%) !default;
+$agenda-today-border:            $agenda-today-color !default;
+$agenda-today-font-weight:       $extra-bold !default;
+
+$agenda-selected-color:          $white !default;
+$agenda-selected-bg:             $agenda-today-color !default;
+$agenda-selected-font-weight:    $agenda-today-font-weight !default;
+
+$agenda-faded-color:             $grey-dark !default;
+$agenda-faded-bg:                $background-color-light !default;
+$agenda-faded-bg-hover:          $background-color !default;
+
+$agenda-unavailable-color:       $state-disabled !default;
+$agenda-unavailable-bg:          $agenda-bg !default;
+
+
+/**
+ * AGENDA
+ * -------------------------------------------------------------------
+ */
+
+.o-agenda {
+
+	table {
+		width: 100%;
+		height: 100%;
+
+		table-layout: fixed;
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+}
+
+
+/**
+ * AGENDA ELEMENTS
+ * -------------------------------------------------------------------
+ */
+
+.o-agenda__nav {
+	display: flex;
+}
+
+.o-agenda__nav-title {
+	flex: 1;
+}
+
+.o-agenda__head {
+	height: $spacer-lg;
+
+	color: $agenda-head-color;
+	background-color: $agenda-head-bg;
+	border-right: 1px solid $agenda-border;
+	border-left: 1px solid $agenda-border;
+}
+
+.o-agenda__calendar {
+	background-color: $agenda-bg;
+
+	td {
+		position: relative;
+
+		padding: 0;
+
+		border: 1px solid $agenda-border;
+
+		@include at($screen-sm) {
+			height: rem(200px);
+
+			vertical-align: top;
+		}
+
+		&:after {
+
+			@include to($screen-sm) {
+				content: '';
+
+				display: block;
+
+				margin-top: 100%;
+			}
+		}
+	}
+}
+
+.o-agenda__day {
+	width: 100%;
+
+	transition: background $animation-normal;
+
+	cursor: pointer;
+
+	@include to($screen-sm) {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	@include at($screen-sm) {
+		height: $spacer;
+		line-height: $spacer;
+
+		padding: 0 $spacer / 4;
+
+		text-align: left;
+
+		background-color: $background-color-light;
+		border-bottom: 1px solid $agenda-border;
+	}
+
+	&:hover,
+	&:active {
+		background-color: $agenda-bg-hover;
+	}
+
+	&.is-current {
+		font-weight: $agenda-today-font-weight;
+
+		color: $agenda-today-color;
+		background-color: $agenda-today-bg;
+
+		&:hover,
+		&:active {
+			background-color: $agenda-today-bg;
+		}
+	}
+
+	&.is-selected {
+		font-weight: $agenda-selected-font-weight;
+
+		color: $agenda-selected-color;
+		background-color: $agenda-selected-bg;
+		box-shadow: 0 0 0 1px $agenda-selected-bg;
+
+		&:hover,
+		&:active {
+			background-color: $agenda-selected-bg;
+		}
+	}
+
+	&.is-faded {
+		color: $agenda-faded-color;
+		background-color: $agenda-faded-bg;
+
+		&:hover,
+		&:active {
+			background-color: $agenda-faded-bg-hover;
+		}
+	}
+
+	&.is-unavailable,
+	&:disabled {
+		font-weight: $normal;
+
+		color: $state-disabled;
+		background-color: $agenda-unavailable-bg;
+		box-shadow: none;
+
+		cursor: not-allowed;
+
+		&:hover,
+		&:active {
+			background-color: $agenda-unavailable-bg;
+		}
+	}
+}
+
+.o-agenda__dots {
+	position: absolute;
+	bottom: rem(6px);
+	left: 50%;
+
+	display: flex;
+
+	transform: translateX(-50%);
+
+	@include at($screen-xs) {
+		bottom: rem(10px);
+	}
+
+	@include at($screen-sm) {
+		display: none;
+	}
+}
+
+.o-agenda__dot {
+	display: block;
+
+	width: rem(4px);
+	height: rem(4px);
+
+	background-color: $brand-secondary;
+
+	&:not(:last-child) {
+		margin-right: rem(5px);
+	}
+}
