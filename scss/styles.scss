@@ -1,4 +1,5 @@
 @import "../node_modules/@a-ui/core/src/styles/_quarks.scss";
+@import "../node_modules/@a-ui/core/src/styles/_utilities.scss";
 
 body {
 	padding: $spacer;
@@ -86,7 +87,7 @@ $agenda-unavailable-bg:          $agenda-bg !default;
 		border: 1px solid $agenda-border;
 
 		@include at($screen-sm) {
-			height: rem(200px);
+			height: rem(120px);
 
 			vertical-align: top;
 		}
@@ -105,6 +106,10 @@ $agenda-unavailable-bg:          $agenda-bg !default;
 }
 
 .o-agenda__day {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+
 	width: 100%;
 
 	transition: background $animation-normal;
@@ -112,81 +117,48 @@ $agenda-unavailable-bg:          $agenda-bg !default;
 	cursor: pointer;
 
 	@include to($screen-sm) {
-		position: absolute;
-		top: 0;
-		bottom: 0;
-
 		display: flex;
 		align-items: center;
 		justify-content: center;
 	}
 
+	&:hover .o-agenda__day__action {
+
+		@include at($screen-sm) {
+			opacity: 1;
+		}
+	}
+}
+
+.o-agenda__day__header {
+
 	@include at($screen-sm) {
+		overflow: hidden;
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
 		height: $spacer;
+
+		padding-left: $spacer / 3;
+
 		line-height: $spacer;
-
-		padding: 0 $spacer / 4;
-
-		text-align: left;
 
 		background-color: $background-color-light;
 		border-bottom: 1px solid $agenda-border;
 	}
+}
 
-	&:hover,
-	&:active {
-		background-color: $agenda-bg-hover;
-	}
+.o-agenda__day__action {
+	display: none;
 
-	&.is-current {
-		font-weight: $agenda-today-font-weight;
+	@include at($screen-sm) {
+		display: block;
 
-		color: $agenda-today-color;
-		background-color: $agenda-today-bg;
+		opacity: 0;
 
-		&:hover,
-		&:active {
-			background-color: $agenda-today-bg;
-		}
-	}
-
-	&.is-selected {
-		font-weight: $agenda-selected-font-weight;
-
-		color: $agenda-selected-color;
-		background-color: $agenda-selected-bg;
-		box-shadow: 0 0 0 1px $agenda-selected-bg;
-
-		&:hover,
-		&:active {
-			background-color: $agenda-selected-bg;
-		}
-	}
-
-	&.is-faded {
-		color: $agenda-faded-color;
-		background-color: $agenda-faded-bg;
-
-		&:hover,
-		&:active {
-			background-color: $agenda-faded-bg-hover;
-		}
-	}
-
-	&.is-unavailable,
-	&:disabled {
-		font-weight: $normal;
-
-		color: $state-disabled;
-		background-color: $agenda-unavailable-bg;
-		box-shadow: none;
-
-		cursor: not-allowed;
-
-		&:hover,
-		&:active {
-			background-color: $agenda-unavailable-bg;
-		}
+		transition: opacity $animation-normal;
 	}
 }
 
@@ -219,4 +191,131 @@ $agenda-unavailable-bg:          $agenda-bg !default;
 	&:not(:last-child) {
 		margin-right: rem(5px);
 	}
+}
+
+
+/**
+ * EVENT LIST
+ * -------------------------------------------------------------------
+ */
+
+
+
+
+/**
+ * EVENT
+ * -------------------------------------------------------------------
+ */
+
+.a-event {
+	display: flex;
+	justify-content: space-between;
+
+	width: 100%;
+
+	margin: 0;
+	padding: 0;
+
+	background: none;
+	border: none;
+	border-radius: 0;
+
+	height: $spacer;
+
+	cursor: pointer;
+}
+
+.a-event__bar {
+	display: block;
+
+	width: $spacer / 6;
+	height: $spacer;
+}
+
+.a-event__icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	min-width: $spacer;
+	height: $spacer;
+
+	padding: 0 $spacer / 6;
+
+	font-size: rem($icon-size-sm);
+
+	// background-color: rgba(0, 0, 0, 0.1);
+
+	/* + .a-event__content {
+		margin-left: $spacer / 6;
+	} */
+}
+
+.a-event__content {
+	overflow: hidden;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-grow: 1;
+
+	height: $spacer;
+
+	font-size: rem($font-size-sm);
+
+	/* + .a-event__icon {
+		margin-left: $spacer / 6;
+	} */
+}
+
+.a-event__title,
+.a-event__meta {
+	padding: 0 $spacer / 3;
+
+	line-height: $line-height-paragraph;
+}
+
+.a-event__title {
+	@extend %u-text-truncate;
+
+	display: block;
+
+	font-weight: $bold;
+}
+
+.a-event__meta {
+	white-space: nowrap;
+
+	color: $text-color-light;
+}
+
+
+/**
+ * EVENT MODIFIERS
+ * -------------------------------------------------------------------
+ */
+
+.a-event__large {
+	height: $spacer-md;
+
+	.a-event__content,
+	.a-event__icon {
+		height: $spacer-md;
+	}
+
+	.a-event__icon {
+		min-width: $spacer-md;
+
+		padding: 0 $spacer / 4;
+
+		font-size: rem($icon-size-base);
+	}
+}
+
+.a-event__full .a-event__icon {
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+.a-event__light {
+	color: $white;
 }
