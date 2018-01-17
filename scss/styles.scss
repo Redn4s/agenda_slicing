@@ -57,8 +57,6 @@ $agenda-unavailable-bg:          $agenda-bg !default;
 	flex-direction: column;
 
 	height: 100%;
-
-	background-color: #fff;
 }
 
 .o-agenda__nav {
@@ -72,14 +70,14 @@ $agenda-unavailable-bg:          $agenda-bg !default;
 
 .o-agenda__table {
 	width: 100%;
-	height: calc(100% - 48px);
+	height: calc(100% - #{$spacer-lg});
 
 	table-layout: fixed;
 	border-collapse: collapse;
 	border-spacing: 0;
 }
 
-.o-agenda__head {
+.o-agenda__table-head {
 	height: $spacer-lg;
 
 	color: $agenda-head-color;
@@ -88,7 +86,7 @@ $agenda-unavailable-bg:          $agenda-bg !default;
 	border-left: 1px solid $agenda-border;
 }
 
-.o-agenda__calendar {
+.o-agenda__table-grid {
 	background-color: $agenda-bg;
 
 	td {
@@ -104,7 +102,7 @@ $agenda-unavailable-bg:          $agenda-bg !default;
 	}
 }
 
-.o-agenda__day {
+.o-agenda__table-cell {
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -121,7 +119,7 @@ $agenda-unavailable-bg:          $agenda-bg !default;
 		justify-content: center;
 	}
 
-	&:hover .o-agenda__day__action {
+	&:hover .o-agenda__table-cell-action {
 
 		@include at($screen-sm) {
 			opacity: 1;
@@ -129,7 +127,7 @@ $agenda-unavailable-bg:          $agenda-bg !default;
 	}
 }
 
-.o-agenda__day__header {
+.o-agenda__table-cell-header {
 
 	@include at($screen-sm) {
 		overflow: hidden;
@@ -149,7 +147,7 @@ $agenda-unavailable-bg:          $agenda-bg !default;
 	}
 }
 
-.o-agenda__day__action {
+.o-agenda__table-cell-action {
 	display: none;
 
 	@include at($screen-sm) {

@@ -651,8 +651,7 @@
 .o-agenda__inner {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  background-color: #fff; }
+  height: 100%; }
 
 .o-agenda__nav {
   display: flex;
@@ -663,29 +662,29 @@
 
 .o-agenda__table {
   width: 100%;
-  height: calc(100% - 48px);
+  height: calc(100% - 3rem);
   table-layout: fixed;
   border-collapse: collapse;
   border-spacing: 0; }
 
-.o-agenda__head {
+.o-agenda__table-head {
   height: 3rem;
   color: #081f2c;
   background-color: white;
   border-right: 1px solid #b0b0b0;
   border-left: 1px solid #b0b0b0; }
 
-.o-agenda__calendar {
+.o-agenda__table-grid {
   background-color: white; }
-  .o-agenda__calendar td {
+  .o-agenda__table-grid td {
     position: relative;
     padding: 0;
     border: 1px solid #b0b0b0; }
     @media screen and (min-width: 45rem) {
-      .o-agenda__calendar td {
+      .o-agenda__table-grid td {
         vertical-align: top; } }
 
-.o-agenda__day {
+.o-agenda__table-cell {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -693,16 +692,16 @@
   transition: background 250ms ease-in-out;
   cursor: pointer; }
   @media screen and (max-width: 45rem) {
-    .o-agenda__day {
+    .o-agenda__table-cell {
       display: flex;
       align-items: center;
       justify-content: center; } }
   @media screen and (min-width: 45rem) {
-    .o-agenda__day:hover .o-agenda__day__action {
+    .o-agenda__table-cell:hover .o-agenda__table-cell-action {
       opacity: 1; } }
 
 @media screen and (min-width: 45rem) {
-  .o-agenda__day__header {
+  .o-agenda__table-cell-header {
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -713,10 +712,10 @@
     background-color: #f3f3f3;
     border-bottom: 1px solid #b0b0b0; } }
 
-.o-agenda__day__action {
+.o-agenda__table-cell-action {
   display: none; }
   @media screen and (min-width: 45rem) {
-    .o-agenda__day__action {
+    .o-agenda__table-cell-action {
       display: block;
       opacity: 0;
       transition: opacity 250ms ease-in-out; } }
