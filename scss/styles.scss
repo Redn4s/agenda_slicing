@@ -59,25 +59,44 @@ $agenda-unavailable-bg:          $agenda-bg !default;
 	height: 100%;
 }
 
+
+/**
+ * AGENDA NAVIGATION
+ * -------------------------------------------------------------------
+ */
+
 .o-agenda__nav {
 	display: flex;
 	flex-shrink: 0;
 }
 
 .o-agenda__nav-title {
-	flex: 1;
+	flex-grow: 1;
 }
+
+
+/**
+ * AGENDA TABLE
+ * -------------------------------------------------------------------
+ */
 
 .o-agenda__table {
-	width: 100%;
-	height: calc(100% - #{$spacer-lg});
+	display: flex;
+	flex: 1 1 0%;
+	flex-direction: column;
 
-	table-layout: fixed;
-	border-collapse: collapse;
-	border-spacing: 0;
+	width: 100%;
 }
 
+
+/**
+ * AGENDA TABLE HEAD
+ * -------------------------------------------------------------------
+ */
+
 .o-agenda__table-head {
+	display: flex;
+
 	height: $spacer-lg;
 
 	color: $agenda-head-color;
@@ -86,55 +105,61 @@ $agenda-unavailable-bg:          $agenda-bg !default;
 	border-left: 1px solid $agenda-border;
 }
 
+.o-agenda__table-head-cell {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: 1 1 0%;
+
+	font-weight: $bold;
+}
+
+
+/**
+ * AGENDA TABLE GRID
+ * -------------------------------------------------------------------
+ */
+
 .o-agenda__table-grid {
+	display: flex;
+	flex: 1 1 0%;
+	flex-direction: column;
+
 	background-color: $agenda-bg;
 
-	td {
-		position: relative;
+	border: 1px solid $agenda-border;
+}
 
-		padding: 0;
+.o-agenda__table-row {
+	display: flex;
 
-		border: 1px solid $agenda-border;
+	flex: 1 1 0%;
 
-		@include at($screen-sm) {
-			vertical-align: top;
-		}
+	&:not(:last-child) {
+		border-bottom: 1px solid $agenda-border;
 	}
 }
 
-.o-agenda__table-cell {
-	position: absolute;
-	top: 0;
-	bottom: 0;
+.o-agenda__table-row-cell {
+	position: relative;
 
-	width: 100%;
-
-	transition: background $animation-normal;
-
-	cursor: pointer;
+	display: flex;
+	flex: 1 1 0%;
 
 	@include to($screen-sm) {
-		display: flex;
 		align-items: center;
 		justify-content: center;
 	}
 
-	&:hover .o-agenda__table-cell-action {
-
-		@include at($screen-sm) {
-			opacity: 1;
-		}
+	&:not(:last-child) {
+		border-right: 1px solid $agenda-border;
 	}
 }
 
-.o-agenda__table-cell-header {
+.o-agenda__table-row-cell-header {
 
 	@include at($screen-sm) {
-		overflow: hidden;
-
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
+		width: 100%;
 
 		height: $spacer;
 
@@ -147,17 +172,11 @@ $agenda-unavailable-bg:          $agenda-bg !default;
 	}
 }
 
-.o-agenda__table-cell-action {
-	display: none;
 
-	@include at($screen-sm) {
-		display: block;
-
-		opacity: 0;
-
-		transition: opacity $animation-normal;
-	}
-}
+/**
+ * AGENDA DOTS
+ * -------------------------------------------------------------------
+ */
 
 .o-agenda__dots {
 	position: absolute;
@@ -189,12 +208,6 @@ $agenda-unavailable-bg:          $agenda-bg !default;
 		margin-right: rem(5px);
 	}
 }
-
-
-/**
- * EVENT LIST
- * -------------------------------------------------------------------
- */
 
 
 /**
