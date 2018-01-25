@@ -158,6 +158,11 @@ $agenda-unavailable-bg:          $agenda-bg !default;
 	display: flex;
 	flex: 1 1 0%;
 
+	cursor: pointer;
+	user-select: none;
+
+	transition: background $animation-normal;
+
 	@include to($screen-sm) {
 		align-items: center;
 		justify-content: center;
@@ -165,6 +170,72 @@ $agenda-unavailable-bg:          $agenda-bg !default;
 
 	&:not(:last-child) {
 		border-right: 1px solid $agenda-border;
+	}
+
+	&:hover,
+	&:active {
+
+		@include to($screen-sm) {
+			background-color: $agenda-bg-hover;
+		}
+	}
+
+	&.is-current {
+		font-weight: $agenda-today-font-weight;
+
+		color: $agenda-today-color;
+		background-color: $agenda-today-bg;
+
+		&:hover,
+		&:active {
+
+			@include to($screen-sm) {
+				background-color: $agenda-today-bg;
+			}
+		}
+	}
+
+	&.is-selected {
+		font-weight: $agenda-selected-font-weight;
+
+		color: $agenda-selected-color;
+		background-color: $agenda-selected-bg;
+
+		&:hover,
+		&:active {
+
+			@include to($screen-sm) {
+				background-color: $agenda-selected-bg;
+			}
+		}
+	}
+
+	&.is-faded {
+		color: $agenda-faded-color;
+		background-color: $agenda-faded-bg;
+
+		&:hover,
+		&:active {
+
+			@include to($screen-sm) {
+				background-color: $agenda-faded-bg-hover;
+			}
+		}
+	}
+
+	&.is-unavailable {
+		color: $state-disabled;
+		background-color: $agenda-unavailable-bg;
+
+		cursor: not-allowed;
+
+		&:hover,
+		&:active {
+
+			@include to($screen-sm) {
+				background-color: $agenda-unavailable-bg;
+			}
+		}
 	}
 }
 
@@ -175,12 +246,10 @@ $agenda-unavailable-bg:          $agenda-bg !default;
 
 		height: $spacer;
 
-		padding-left: $spacer / 3;
+		padding-left: $spacer / 4;
 
 		line-height: $spacer;
-
-		background-color: $background-color-light;
-		border-bottom: 1px solid $agenda-border;
+		font-weight: $bold;
 	}
 }
 
