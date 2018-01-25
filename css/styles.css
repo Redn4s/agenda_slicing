@@ -654,15 +654,51 @@
   height: 100%; }
 
 /**
+ * AGENDA HEADER
+ * -------------------------------------------------------------------
+ */
+.o-agenda__header {
+  display: flex;
+  height: 3rem; }
+  @media screen and (min-width: 45rem) {
+    .o-agenda__header {
+      margin-bottom: 0.75rem; } }
+
+/**
  * AGENDA NAVIGATION
  * -------------------------------------------------------------------
  */
 .o-agenda__nav {
-  display: flex;
-  flex-shrink: 0; }
+  display: flex; }
+  @media screen and (max-width: 45rem) {
+    .o-agenda__nav {
+      flex-grow: 1; } }
+  @media screen and (max-width: 45rem) {
+    .o-agenda__nav .a-button {
+      padding: 0; } }
+  @media screen and (min-width: 45rem) {
+    .o-agenda__nav .a-button:not(:last-child) {
+      border-right: 1px solid #005599; } }
 
 .o-agenda__nav-title {
-  flex-grow: 1; }
+  width: auto; }
+  @media screen and (max-width: 45rem) {
+    .o-agenda__nav-title {
+      flex-grow: 1; } }
+
+@media screen and (max-width: 45rem) {
+  .o-agenda__nav-today-button.a-button {
+    display: none; } }
+
+@media screen and (min-width: 45rem) {
+  .o-agenda__nav-today-button.a-button {
+    margin-left: 0.75rem; } }
+
+.o-agenda__nav-today-icon.a-button {
+  border-left: 1px solid #005599; }
+  @media screen and (min-width: 45rem) {
+    .o-agenda__nav-today-icon.a-button {
+      display: none; } }
 
 /**
  * AGENDA TABLE
@@ -685,6 +721,10 @@
   background-color: white;
   border-right: 1px solid #b0b0b0;
   border-left: 1px solid #b0b0b0; }
+  @media screen and (min-width: 45rem) {
+    .o-agenda__table-head {
+      height: 2.25rem;
+      border-top: 1px solid #b0b0b0; } }
 
 .o-agenda__table-head-cell {
   display: flex;
@@ -728,8 +768,8 @@
     .o-agenda__table-row-cell {
       align-items: center;
       justify-content: center; } }
-  .o-agenda__table-row-cell:not(:last-child) {
-    border-right: 1px solid #b0b0b0; }
+  .o-agenda__table-row-cell + .o-agenda__table-row-cell {
+    border-left: 1px solid #b0b0b0; }
   @media screen and (max-width: 45rem) {
     .o-agenda__table-row-cell:hover, .o-agenda__table-row-cell:active {
       background-color: #cce0f0; } }

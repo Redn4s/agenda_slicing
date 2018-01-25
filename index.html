@@ -17,22 +17,34 @@
 	<meta name="format-detection" content="telephone=no" />
 
 </head>
-<body>
+<body style="padding: 24px;">
 	<div class="o-agenda-wrapper">
 		<div class="o-agenda">
 			<div class="o-agenda__inner">
-				<div class="o-agenda__nav">
-					<button tabindex="-1" type="button" aria-label="previous month" class="a-button has-icon">
-						<i class="fa fa-angle-left"></i>
-					</button>
+				<div class="o-agenda__header">
+					<div class="o-agenda__nav">
+						<button tabindex="-1" type="button" aria-label="previous month" class="o-agenda__nav-previous a-button has-icon">
+							<i class="fa fa-angle-left"></i>
+						</button>
 
-					<button tabindex="0" type="button" class="o-agenda__nav-title a-button">
-						January
-					</button>
+						<button tabindex="0" type="button" class="o-agenda__nav-title a-button">
+							January 2018
+						</button>
 
-					<button tabindex="0" type="button" aria-label="next month" class="a-button has-icon">
-						<i class="fa fa-angle-right"></i>
-					</button>
+						<button tabindex="0" type="button" aria-label="next month" class="o-agenda__nav-next a-button has-icon">
+							<i class="fa fa-angle-right"></i>
+						</button>
+					</div>
+
+					<div class="o-agenda__subnav">
+						<button tabindex="0" type="button" aria-label="today" class="o-agenda__nav-today-button a-button">
+							Vandaag
+						</button>
+
+						<button tabindex="0" type="button" aria-label="today" class="o-agenda__nav-today-icon a-button has-icon">
+							<i class="fa fa-calendar"></i>
+						</button>
+					</div>
 				</div>
 
 				<div class="o-agenda__table">
