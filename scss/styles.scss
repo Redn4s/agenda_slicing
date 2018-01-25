@@ -5,7 +5,7 @@
 	position: relative;
 
 	width: 100%;
-	height: 100vh;
+	height: calc(100vh - 48px);
 }
 
 
@@ -14,13 +14,13 @@
  * -------------------------------------------------------------------
  */
 
-$agenda-border:                  $border-color !default;
+$agenda-border:                  $border-color-light !default;
 $agenda-bg:                      $white !default;
 $agenda-bg-hover:                mix($brand-primary, $white, 20%) !default;
 
-$agenda-head-color:              $text-color !default;
+$agenda-head-color:              $white !default;
 $agenda-head-border:             $agenda-border !default;
-$agenda-head-bg:                 $agenda-bg !default;
+$agenda-head-bg:                 $brand-primary !default;
 
 $agenda-today-color:             $brand-primary !default;
 $agenda-today-bg:                mix($agenda-today-color, $white, 20%) !default;
@@ -67,12 +67,12 @@ $agenda-unavailable-bg:          $agenda-bg !default;
 
 .o-agenda__header {
 	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
 
 	height: $spacer-lg;
 
-	@include at($screen-sm) {
-		margin-bottom: $spacer-xs;
-	}
+	margin-bottom: $spacer-xs;
 }
 
 
@@ -84,52 +84,21 @@ $agenda-unavailable-bg:          $agenda-bg !default;
 .o-agenda__nav {
 	display: flex;
 
-	@include to($screen-sm) {
-		flex-grow: 1;
-	}
+	.a-button:not(:last-child) {
 
-	.a-button {
-
-		@include to($screen-sm) {
-			padding: 0;
-		}
-
-		&:not(:last-child) {
-
-			@include at($screen-sm) {
-				border-right: 1px solid mix($btn-primary-bg, $black, 85%);
-			}
+		@include at($screen-sm) {
+			border-right: 1px solid mix($btn-primary-bg, $black, 85%);
 		}
 	}
 }
 
-.o-agenda__nav-title {
-	width: auto;
-
-	@include to($screen-sm) {
-		flex-grow: 1;
-	}
-}
-
-.o-agenda__nav-today-button.a-button {
+.o-agenda__nav-previous.a-button,
+.o-agenda__nav-next.a-button {
 
 	@include to($screen-sm) {
 		display: none;
 	}
-
-	@include at($screen-sm) {
-		margin-left: $spacer-xs;
-	}
 }
-
-.o-agenda__nav-today-icon.a-button {
-	border-left: 1px solid mix($btn-primary-bg, $black, 85%);
-
-	@include at($screen-sm) {
-		display: none;
-	}
-}
-
 
 /**
  * AGENDA TABLE
@@ -157,14 +126,6 @@ $agenda-unavailable-bg:          $agenda-bg !default;
 
 	color: $agenda-head-color;
 	background-color: $agenda-head-bg;
-	border-right: 1px solid $agenda-border;
-	border-left: 1px solid $agenda-border;
-
-	@include at($screen-sm) {
-		height: $spacer-md;
-
-		border-top: 1px solid $agenda-border;
-	}
 }
 
 .o-agenda__table-head-cell {
@@ -198,8 +159,8 @@ $agenda-unavailable-bg:          $agenda-bg !default;
 
 	flex: 1 1 0%;
 
-	&:not(:last-child) {
-		border-bottom: 1px solid $agenda-border;
+	+ .o-agenda__table-row {
+		border-top: 1px solid $agenda-border;
 	}
 
 	.a-event {

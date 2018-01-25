@@ -631,7 +631,7 @@
 .o-agenda-wrapper {
   position: relative;
   width: 100%;
-  height: 100vh; }
+  height: calc(100vh - 48px); }
 
 /**
  * AGENDA VARIABLES
@@ -659,10 +659,10 @@
  */
 .o-agenda__header {
   display: flex;
-  height: 3rem; }
-  @media screen and (min-width: 45rem) {
-    .o-agenda__header {
-      margin-bottom: 0.75rem; } }
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 3rem;
+  margin-bottom: 0.75rem; }
 
 /**
  * AGENDA NAVIGATION
@@ -670,35 +670,14 @@
  */
 .o-agenda__nav {
   display: flex; }
-  @media screen and (max-width: 45rem) {
-    .o-agenda__nav {
-      flex-grow: 1; } }
-  @media screen and (max-width: 45rem) {
-    .o-agenda__nav .a-button {
-      padding: 0; } }
   @media screen and (min-width: 45rem) {
     .o-agenda__nav .a-button:not(:last-child) {
       border-right: 1px solid #005599; } }
 
-.o-agenda__nav-title {
-  width: auto; }
-  @media screen and (max-width: 45rem) {
-    .o-agenda__nav-title {
-      flex-grow: 1; } }
-
 @media screen and (max-width: 45rem) {
-  .o-agenda__nav-today-button.a-button {
+  .o-agenda__nav-previous.a-button,
+  .o-agenda__nav-next.a-button {
     display: none; } }
-
-@media screen and (min-width: 45rem) {
-  .o-agenda__nav-today-button.a-button {
-    margin-left: 0.75rem; } }
-
-.o-agenda__nav-today-icon.a-button {
-  border-left: 1px solid #005599; }
-  @media screen and (min-width: 45rem) {
-    .o-agenda__nav-today-icon.a-button {
-      display: none; } }
 
 /**
  * AGENDA TABLE
@@ -717,14 +696,8 @@
 .o-agenda__table-head {
   display: flex;
   height: 3rem;
-  color: #081f2c;
-  background-color: white;
-  border-right: 1px solid #b0b0b0;
-  border-left: 1px solid #b0b0b0; }
-  @media screen and (min-width: 45rem) {
-    .o-agenda__table-head {
-      height: 2.25rem;
-      border-top: 1px solid #b0b0b0; } }
+  color: white;
+  background-color: #0064b4; }
 
 .o-agenda__table-head-cell {
   display: flex;
@@ -742,14 +715,14 @@
   flex: 1 1 0%;
   flex-direction: column;
   background-color: white;
-  border: 1px solid #b0b0b0; }
+  border: 1px solid #d8d8d8; }
 
 .o-agenda__table-row {
   position: relative;
   display: flex;
   flex: 1 1 0%; }
-  .o-agenda__table-row:not(:last-child) {
-    border-bottom: 1px solid #b0b0b0; }
+  .o-agenda__table-row + .o-agenda__table-row {
+    border-top: 1px solid #d8d8d8; }
   @media screen and (max-width: 45rem) {
     .o-agenda__table-row .a-event {
       display: none; } }
@@ -769,7 +742,7 @@
       align-items: center;
       justify-content: center; } }
   .o-agenda__table-row-cell + .o-agenda__table-row-cell {
-    border-left: 1px solid #b0b0b0; }
+    border-left: 1px solid #d8d8d8; }
   @media screen and (max-width: 45rem) {
     .o-agenda__table-row-cell:hover, .o-agenda__table-row-cell:active {
       background-color: #cce0f0; } }
