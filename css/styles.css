@@ -968,5 +968,5 @@
   .a-event__large .a-event__extra > * {
     line-height: 2.25rem; }
 
-.a-event__light {
+.a-event--light {
   color: white; }
