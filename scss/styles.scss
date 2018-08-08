@@ -100,6 +100,51 @@ $agenda-unavailable-bg:          $agenda-bg !default;
 	}
 }
 
+
+/**
+ * AGENDA BODY
+ * -------------------------------------------------------------------
+ */
+
+.o-agenda__body {
+	display: flex;
+	flex-grow: 1;
+	flex-direction: column;
+}
+
+.o-agenda__body-row {
+	display: flex;
+	flex-grow: 1;
+}
+
+
+/**
+ * AGENDA SIDEBAR
+ * -------------------------------------------------------------------
+ */
+
+.o-agenda__sidebar {
+	display: flex;
+	flex-direction: column;
+
+	margin-right: $spacer / 4;
+}
+
+.o-agenda__sidebar-cell {
+	flex-grow: 1;
+
+	&:first-child .o-agenda__sidebar-cell-header {
+		visibility: hidden;
+	}
+}
+
+.o-agenda__sidebar-cell-header {
+	display: block;
+
+	transform: translateY(-50%);
+}
+
+
 /**
  * AGENDA TABLE
  * -------------------------------------------------------------------
@@ -107,7 +152,7 @@ $agenda-unavailable-bg:          $agenda-bg !default;
 
 .o-agenda__table {
 	display: flex;
-	flex: 1 1 0%;
+	flex-grow: 1;
 	flex-direction: column;
 
 	width: 100%;
@@ -132,7 +177,7 @@ $agenda-unavailable-bg:          $agenda-bg !default;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	flex: 1 1 0%;
+	flex-grow: 1;
 
 	font-weight: $bold;
 }
@@ -145,19 +190,17 @@ $agenda-unavailable-bg:          $agenda-bg !default;
 
 .o-agenda__table-grid {
 	display: flex;
-	flex: 1 1 0%;
+	flex-grow: 1;
 	flex-direction: column;
 
 	background-color: $agenda-bg;
-
 	border: 1px solid $agenda-border;
 }
 
 .o-agenda__table-row {
 	position: relative;
 	display: flex;
-
-	flex: 1 1 0%;
+	flex-grow: 1;
 
 	+ .o-agenda__table-row {
 		border-top: 1px solid $agenda-border;
@@ -273,6 +316,41 @@ $agenda-unavailable-bg:          $agenda-bg !default;
 
 		line-height: $spacer;
 		font-weight: $bold;
+	}
+}
+
+
+/**
+ * AGENDA TABLE COLUMNS
+ * -------------------------------------------------------------------
+ */
+
+.o-agenda__columns {
+	display: flex;
+	flex-grow: 1;
+
+	border-right: 1px solid $agenda-border;
+	border-bottom: 1px solid $agenda-border;
+	border-left: 1px solid $agenda-border;
+}
+
+.o-agenda__column {
+	position: relative;
+	display: flex;
+	flex-grow: 1;
+	flex-direction: column;
+
+	+ .o-agenda__column {
+		border-left: 1px solid $agenda-border;
+	}
+}
+
+.o-agenda__column-cell {
+	position: relative;
+	flex-grow: 1;
+
+	&:not(:first-child) {
+		border-top: 1px solid $agenda-border;
 	}
 }
 
