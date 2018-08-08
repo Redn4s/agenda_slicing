@@ -107,6 +107,8 @@ $agenda-unavailable-bg:          $agenda-bg !default;
  */
 
 .o-agenda__body {
+	overflow: hidden;
+
 	display: flex;
 	flex-grow: 1;
 	flex-direction: column;
@@ -115,6 +117,17 @@ $agenda-unavailable-bg:          $agenda-bg !default;
 .o-agenda__body-row {
 	display: flex;
 	flex-grow: 1;
+
+	&:first-child {
+		flex-shrink: 0;
+
+		height: $spacer * 7;
+	}
+
+	&:last-child {
+		overflow-y: auto;
+		-webkit-overflow-scrolling: touch;
+	}
 }
 
 
@@ -127,11 +140,16 @@ $agenda-unavailable-bg:          $agenda-bg !default;
 	display: flex;
 	flex-direction: column;
 
-	margin-right: $spacer / 4;
+	height: $spacer-lg * 24;
 }
 
 .o-agenda__sidebar-cell {
-	flex-grow: 1;
+	width: rem(40px);
+	height: $spacer-lg;
+
+	@include at($screen-sm) {
+		width: $spacer-lg;
+	}
 
 	&:first-child .o-agenda__sidebar-cell-header {
 		visibility: hidden;
@@ -141,7 +159,16 @@ $agenda-unavailable-bg:          $agenda-bg !default;
 .o-agenda__sidebar-cell-header {
 	display: block;
 
+	text-align: center;
+	font-size: rem($font-size-ti);
+
+	color: $text-color-light;
+
 	transform: translateY(-50%);
+
+	@include at($screen-sm) {
+		font-size: rem($font-size-sm);
+	}
 }
 
 
@@ -330,8 +357,27 @@ $agenda-unavailable-bg:          $agenda-bg !default;
 	flex-grow: 1;
 
 	border-right: 1px solid $agenda-border;
-	border-bottom: 1px solid $agenda-border;
 	border-left: 1px solid $agenda-border;
+
+	height: $spacer-lg * 24;
+
+	&::after {
+		content: "";
+
+		display: block;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+
+		width: calc(100% - #{rem(40px)});
+		height: 1px;
+
+		background-color: $agenda-border;
+
+		@include at($screen-sm) {
+			width: calc(100% - #{$spacer-lg});
+		}
+	}
 }
 
 .o-agenda__column {
@@ -347,7 +393,8 @@ $agenda-unavailable-bg:          $agenda-bg !default;
 
 .o-agenda__column-cell {
 	position: relative;
-	flex-grow: 1;
+
+	height: $spacer-lg;
 
 	&:not(:first-child) {
 		border-top: 1px solid $agenda-border;
