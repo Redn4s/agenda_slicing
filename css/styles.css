@@ -631,7 +631,10 @@
 .o-agenda-wrapper {
   position: relative;
   width: 100%;
-  height: calc(100vh - 48px); }
+  height: 25rem; }
+  @media screen and (min-width: 57.5rem) {
+    .o-agenda-wrapper {
+      height: 50rem; } }
 
 /**
  * AGENDA VARIABLES

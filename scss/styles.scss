@@ -1,11 +1,17 @@
 @import "../node_modules/@a-ui/core/src/styles/_quarks.scss";
 @import "../node_modules/@a-ui/core/src/styles/_utilities.scss";
 
+$agenda-wrapper-breakpoint: rem(920px);
+
 .o-agenda-wrapper {
 	position: relative;
 
 	width: 100%;
-	height: calc(100vh - 48px);
+	height: rem(400px);
+
+	@include at($agenda-wrapper-breakpoint) {
+		height: rem(800px);
+	}
 }
 
 
