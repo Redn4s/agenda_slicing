@@ -74,35 +74,45 @@ $agenda-unavailable-bg:          $agenda-bg !default;
 .o-agenda__header {
 	display: flex;
 	align-items: flex-end;
-	justify-content: space-between;
-
-	height: $spacer-lg;
+	flex-shrink: 0;
 
 	margin-bottom: $spacer-xs;
-}
 
+	@include to($screen-xs) {
+		flex-direction: column;
+	}
 
-/**
- * AGENDA NAVIGATION
- * -------------------------------------------------------------------
- */
+	@include at($screen-xs) {
+		justify-content: flex-end;
+	}
 
-.o-agenda__nav {
-	display: flex;
+	> *:not(:last-child) {
+		margin-right: $spacer-xs;
 
-	.a-button:not(:last-child) {
-
-		@include at($screen-sm) {
-			border-right: 1px solid mix($btn-primary-bg, $black, 85%);
+		@include at($screen-xs) {
+			margin-right: $spacer;
 		}
 	}
 }
 
-.o-agenda__nav-previous.a-button,
-.o-agenda__nav-next.a-button {
+.o-agenda__header-title {
+	@extend %u-text-truncate;
 
-	@include to($screen-sm) {
-		display: none;
+	margin-bottom: $spacer-xs;
+}
+
+.o-agenda__header-actions {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	flex-shrink: 0;
+
+	> *:not(:last-child) {
+		margin-right: $spacer-xs;
+
+		@include at($screen-xs) {
+			margin-right: $spacer;
+		}
 	}
 }
 
@@ -400,10 +410,42 @@ $agenda-unavailable-bg:          $agenda-bg !default;
 .o-agenda__column-cell {
 	position: relative;
 
-	height: $spacer-lg;
+	height: $spacer;
 
-	&:not(:first-child) {
+	&:nth-child(even) {
+		border-top: 1px dashed $agenda-border;
+	}
+
+	&:nth-child(odd) {
 		border-top: 1px solid $agenda-border;
+	}
+
+	&:first-child {
+		border-top: none;
+	}
+
+	&:hover,
+	&:active {
+
+		@include to($screen-sm) {
+			background-color: $agenda-bg-hover;
+		}
+	}
+
+	&.is-selected {
+		font-weight: $agenda-selected-font-weight;
+
+		color: $agenda-selected-color;
+		background-color: $agenda-selected-bg;
+		border-color: mix($agenda-selected-bg, $black, 85%);
+
+		&:hover,
+		&:active {
+
+			@include to($screen-sm) {
+				background-color: $agenda-selected-bg;
+			}
+		}
 	}
 }
 
@@ -560,4 +602,24 @@ $agenda-unavailable-bg:          $agenda-bg !default;
 
 .a-event--light {
 	color: $white;
+}
+
+
+/**
+ * VISIBILITY HELPERS
+ * -------------------------------------------------------------------
+ */
+
+.u-visible-xs-sm {
+
+	@include at($screen-sm) {
+		display: none !important;
+	}
+}
+
+.u-hidden-xs-sm {
+
+	@include to($screen-sm) {
+		display: none !important;
+	}
 }

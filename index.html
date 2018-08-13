@@ -18,24 +18,54 @@
 
 </head>
 <body style="padding: 24px;">
+
+	<!-- ### DAY VIEW ### -->
+
 	<div class="o-agenda-wrapper">
 		<div class="o-agenda">
 			<div class="o-agenda__inner">
 				<div class="o-agenda__header">
-					<h5>Januari 2018</h5>
+					<h5 class="o-agenda__header-title">1 januari 2018</h5>
 
-					<div class="o-agenda__nav">
-						<button tabindex="-1" type="button" aria-label="previous month" class="o-agenda__nav-previous a-button has-icon">
-							<i class="fa fa-angle-left"></i>
-						</button>
+					<div class="o-agenda__header-actions">
+						<div class="a-input has-icon-right u-visible-xs-sm">
+							<div class="a-input__wrapper">
+								<select name="switcher" id="switcher">
+									<option value="day">Dag</option>
+									<option value="week">Week</option>
+									<option value="month">Maand</option>
+								</select>
+								<span class="fa fa-angle-down"></span>
+							</div>
+						</div>
 
-						<button tabindex="0" type="button" aria-label="today" class="a-button">
-							Vandaag
-						</button>
+						<div class="m-button-group u-hidden-xs-sm">
+							<button class="a-button is-active">
+								Dag
+							</button>
 
-						<button tabindex="0" type="button" aria-label="next month" class="o-agenda__nav-next a-button has-icon">
-							<i class="fa fa-angle-right"></i>
-						</button>
+							<button class="a-button">
+								Week
+							</button>
+
+							<button class="a-button">
+								Maand
+							</button>
+						</div>
+
+						<div class="m-button-group">
+							<button tabindex="-1" type="button" aria-label="previous day" class="o-agenda__nav-previous a-button has-icon u-hidden-xs-sm">
+								<i class="fa fa-angle-left"></i>
+							</button>
+
+							<button tabindex="0" type="button" aria-label="today" class="a-button">
+								Vandaag
+							</button>
+
+							<button tabindex="0" type="button" aria-label="next day" class="o-agenda__nav-next a-button has-icon u-hidden-xs-sm">
+								<i class="fa fa-angle-right"></i>
+							</button>
+						</div>
 					</div>
 				</div>
 
@@ -49,7 +79,7 @@
 
 						<div class="o-agenda__table">
 							<div class="o-agenda__table-head">
-								<div class="o-agenda__table-head-cell">Ma</div>
+								<div class="o-agenda__table-head-cell">Maandag</div>
 							</div>
 
 							<div class="o-agenda__table-grid">
@@ -64,18 +94,18 @@
 										</div>
 									</div>
 
-									<div class="a-event a-event--light" style="left: calc(0% + 4px); top: 28px; width: calc(100% - 8px); background-color: rgb(216, 216, 216);">
+									<div class="a-event a-event--light" style="left: calc(0% + 4px); top: 28px; width: calc(100% - 8px); background-color: #F18A00;">
 										<div class="a-event__content">
 											<div class="a-event__main">
-												<i class="a-event__icon fa fa-bed"></i><span class="a-event__title">Ziekte - 7u36</span>
+												<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Evenement</span>
 											</div>
 										</div>
 									</div>
 
-									<div class="a-event a-event--light" style="left: calc(0% + 4px); top: 56px; width: calc(100% - 8px); background-color: rgb(108, 194, 74);">
+									<div class="a-event a-event--light" style="left: calc(0% + 4px); top: 56px; width: calc(100% - 8px); background-color: #6CC24A;">
 										<div class="a-event__content">
 											<div class="a-event__main">
-												<i class="a-event__icon fa fa-globe"></i><span class="a-event__title">Vakantie - 7u36</span>
+												<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Evenement</span>
 											</div>
 										</div>
 									</div>
@@ -191,6 +221,30 @@
 								<div class="o-agenda__column-cell"></div>
 								<div class="o-agenda__column-cell"></div>
 								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell is-selected"></div>
+								<div class="o-agenda__column-cell is-selected"></div>
+								<div class="o-agenda__column-cell is-selected"></div>
+								<div class="o-agenda__column-cell is-selected"></div>
+								<div class="o-agenda__column-cell is-selected"></div>
+								<div class="o-agenda__column-cell is-selected"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
 								<div class="o-agenda__column-cell"></div>
 								<div class="o-agenda__column-cell"></div>
 								<div class="o-agenda__column-cell"></div>
@@ -210,18 +264,26 @@
 								<div class="o-agenda__column-cell"></div>
 								<div class="o-agenda__column-cell"></div>
 
-								<div class="a-event a-event--light" style="position: absolute; top: 384px; height: 192px; background-color: rgb(216, 216, 216);">
+								<div class="a-event a-event--light" style="position: absolute; top: 384px; height: 192px; background-color: #D8D8D8;">
 									<div class="a-event__content">
 										<div class="a-event__main">
-											<i class="a-event__icon fa fa-bed"></i><span class="a-event__title">Ziekte - 4u</span>
+											<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Evenement</span>
 										</div>
 									</div>
 								</div>
 
-								<div class="a-event a-event--light" style="position: absolute; top: 624px; height: 192px; background-color: rgb(108, 194, 74);">
+								<div class="a-event a-event--light" style="position: absolute; top: 624px; height: 192px; width: 50%; background-color: #6CC24A;">
 									<div class="a-event__content">
 										<div class="a-event__main">
-											<i class="a-event__icon fa fa-globe"></i><span class="a-event__title">Vakantie - 4u</span>
+											<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Evenement</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="a-event a-event--light" style="position: absolute; top: 624px; height: 192px; width: 50%; left: 50%; background-color: #F18A00;">
+									<div class="a-event__content">
+										<div class="a-event__main">
+											<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Evenement</span>
 										</div>
 									</div>
 								</div>
@@ -239,24 +301,53 @@
 	<br>
 	<br>
 
+	<!-- ### WEEK VIEW ### -->
+
 	<div class="o-agenda-wrapper">
 		<div class="o-agenda">
 			<div class="o-agenda__inner">
 				<div class="o-agenda__header">
-					<h5>Januari 2018</h5>
+					<h5 class="o-agenda__header-title">Januari - februari 2018</h5>
 
-					<div class="o-agenda__nav">
-						<button tabindex="-1" type="button" aria-label="previous month" class="o-agenda__nav-previous a-button has-icon">
-							<i class="fa fa-angle-left"></i>
-						</button>
+					<div class="o-agenda__header-actions">
+						<div class="a-input has-icon-right u-visible-xs-sm">
+							<div class="a-input__wrapper">
+								<select name="switcher" id="switcher">
+									<option value="day">Dag</option>
+									<option value="week">Week</option>
+									<option value="month">Maand</option>
+								</select>
+								<span class="fa fa-angle-down"></span>
+							</div>
+						</div>
 
-						<button tabindex="0" type="button" aria-label="today" class="a-button">
-							Vandaag
-						</button>
+						<div class="m-button-group u-hidden-xs-sm">
+							<button class="a-button is-active">
+								Dag
+							</button>
 
-						<button tabindex="0" type="button" aria-label="next month" class="o-agenda__nav-next a-button has-icon">
-							<i class="fa fa-angle-right"></i>
-						</button>
+							<button class="a-button">
+								Week
+							</button>
+
+							<button class="a-button">
+								Maand
+							</button>
+						</div>
+
+						<div class="m-button-group">
+							<button tabindex="-1" type="button" aria-label="previous week" class="o-agenda__nav-previous a-button has-icon u-hidden-xs-sm">
+								<i class="fa fa-angle-left"></i>
+							</button>
+
+							<button tabindex="0" type="button" aria-label="today" class="a-button">
+								Vandaag
+							</button>
+
+							<button tabindex="0" type="button" aria-label="next week" class="o-agenda__nav-next a-button has-icon u-hidden-xs-sm">
+								<i class="fa fa-angle-right"></i>
+							</button>
+						</div>
 					</div>
 				</div>
 
@@ -343,42 +434,26 @@
 										</span>
 									</div>
 
-									<button class="a-event" style="left: calc(0% + 4px); top: 28px; width: calc(14.2857% - 8px);">
-										<div class="a-event__bar" style="background-color: #E20E49;"></div>
-
+									<button class="a-event a-event--light" style="left: calc(0% + 4px); top: 28px; width: calc(14.2857% - 8px); background-color: #D8D8D8;">
 										<div class="a-event__content">
 											<div class="a-event__main">
-												<span class="a-event__title">Status interactieve agenda</span>
-											</div>
-
-											<div class="a-event__extra">
-												<span class="a-event__meta">08:00</span>
+												<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Evenement</span>
 											</div>
 										</div>
 									</button>
 
-									<button class="a-event" style="left: calc(28.5714% + 4px); top: 28px; width: calc(14.2857% - 8px);">
-										<div class="a-event__bar" style="background-color: #E20E49;"></div>
-
+									<button class="a-event a-event--light" style="left: calc(28.5714% + 4px); top: 28px; width: calc(14.2857% - 8px); background-color: #6CC24A;">
 										<div class="a-event__content">
 											<div class="a-event__main">
-												<span class="a-event__title">Status interactieve agenda</span>
-											</div>
-
-											<div class="a-event__extra">
-												<span class="a-event__meta">08:00</span>
+												<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Evenement</span>
 											</div>
 										</div>
 									</button>
 
-									<button class="a-event a-event--light" style="left: calc(14.2857% + 4px); top: 56px; width: calc(57.1429% - 8px); background-color: #E20E49;">
+									<button class="a-event a-event--light" style="left: calc(14.2857% + 4px); top: 56px; width: calc(57.1429% - 8px); background-color: #F18A00;">
 										<div class="a-event__content">
 											<div class="a-event__main">
-												<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Gewerkte uren - 8u00</span>
-											</div>
-
-											<div class="a-event__extra">
-												<i class="a-event__icon fa fa-bicycle"></i>
+												<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Evenement</span>
 											</div>
 										</div>
 									</button>
@@ -512,6 +587,105 @@
 								<div class="o-agenda__column-cell"></div>
 								<div class="o-agenda__column-cell"></div>
 								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+
+								<div class="a-event a-event--light" style="position: absolute; top: 264px; height: 192px; width: calc(100% / 3); background-color: #F18A00;">
+									<div class="a-event__content">
+										<div class="a-event__main">
+											<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Evenement</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="a-event a-event--light" style="position: absolute; top: 312px; height: 192px; width: calc(100% / 3); left: calc(100% / 3); background-color: #D8D8D8;">
+									<div class="a-event__content">
+										<div class="a-event__main">
+											<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Evenement</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="a-event a-event--light" style="position: absolute; top: 312px; height: 120px; width: calc(100% / 3); left: calc(100% / 3 * 2); background-color: #6CC24A;">
+									<div class="a-event__content">
+										<div class="a-event__main">
+											<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Evenement</span>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="o-agenda__column">
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell is-selected"></div>
+								<div class="o-agenda__column-cell is-selected"></div>
+								<div class="o-agenda__column-cell is-selected"></div>
+								<div class="o-agenda__column-cell is-selected"></div>
+								<div class="o-agenda__column-cell is-selected"></div>
+								<div class="o-agenda__column-cell is-selected"></div>
+								<div class="o-agenda__column-cell is-selected"></div>
+								<div class="o-agenda__column-cell is-selected"></div>
+								<div class="o-agenda__column-cell is-selected"></div>
+								<div class="o-agenda__column-cell is-selected"></div>
+								<div class="o-agenda__column-cell is-selected"></div>
+								<div class="o-agenda__column-cell is-selected"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
 							</div>
 
 							<div class="o-agenda__column">
@@ -539,11 +713,51 @@
 								<div class="o-agenda__column-cell"></div>
 								<div class="o-agenda__column-cell"></div>
 								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
 
-								<div class="a-event a-event--light" style="position: absolute; top: 384px; height: 432px; background-color: rgb(216, 216, 216);">
+								<div class="a-event a-event--light" style="position: absolute; top: 384px; height: 192px; background-color: #D8D8D8;">
 									<div class="a-event__content">
 										<div class="a-event__main">
-											<i class="a-event__icon fa fa-bed"></i><span class="a-event__title">Ziekte - 4u</span>
+											<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Evenement</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="a-event a-event--light" style="position: absolute; top: 624px; height: 192px; width: 50%; background-color: #6CC24A;">
+									<div class="a-event__content">
+										<div class="a-event__main">
+											<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Evenement</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="a-event a-event--light" style="position: absolute; top: 624px; height: 192px; width: 50%; left: 50%; background-color: #F18A00;">
+									<div class="a-event__content">
+										<div class="a-event__main">
+											<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Evenement</span>
 										</div>
 									</div>
 								</div>
@@ -574,19 +788,94 @@
 								<div class="o-agenda__column-cell"></div>
 								<div class="o-agenda__column-cell"></div>
 								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+							</div>
 
-								<div class="a-event a-event--light" style="position: absolute; top: 384px; height: 192px; background-color: rgb(216, 216, 216);">
+							<div class="o-agenda__column">
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+
+								<div class="a-event a-event--light" style="position: absolute; top: 240px; height: 240px; background-color: #6CC24A;">
 									<div class="a-event__content">
 										<div class="a-event__main">
-											<i class="a-event__icon fa fa-bed"></i><span class="a-event__title">Ziekte - 4u</span>
+											<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Evenement</span>
 										</div>
 									</div>
 								</div>
 
-								<div class="a-event a-event--light" style="position: absolute; top: 624px; height: 192px; background-color: rgb(108, 194, 74);">
+								<div class="a-event a-event--light" style="position: absolute; top: 672px; height: 120px; background-color: #D8D8D8;">
 									<div class="a-event__content">
 										<div class="a-event__main">
-											<i class="a-event__icon fa fa-globe"></i><span class="a-event__title">Vakantie - 4u</span>
+											<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Evenement</span>
 										</div>
 									</div>
 								</div>
@@ -617,9 +906,6 @@
 								<div class="o-agenda__column-cell"></div>
 								<div class="o-agenda__column-cell"></div>
 								<div class="o-agenda__column-cell"></div>
-							</div>
-
-							<div class="o-agenda__column">
 								<div class="o-agenda__column-cell"></div>
 								<div class="o-agenda__column-cell"></div>
 								<div class="o-agenda__column-cell"></div>
@@ -671,9 +957,6 @@
 								<div class="o-agenda__column-cell"></div>
 								<div class="o-agenda__column-cell"></div>
 								<div class="o-agenda__column-cell"></div>
-							</div>
-
-							<div class="o-agenda__column">
 								<div class="o-agenda__column-cell"></div>
 								<div class="o-agenda__column-cell"></div>
 								<div class="o-agenda__column-cell"></div>
@@ -712,24 +995,53 @@
 	<br>
 	<br>
 
+	<!-- ### MONTH VIEW ### -->
+
 	<div class="o-agenda-wrapper">
 		<div class="o-agenda">
 			<div class="o-agenda__inner">
 				<div class="o-agenda__header">
-					<h5>Januari 2018</h5>
+					<h5 class="o-agenda__header-title">Januari 2018</h5>
 
-					<div class="o-agenda__nav">
-						<button tabindex="-1" type="button" aria-label="previous month" class="o-agenda__nav-previous a-button has-icon">
-							<i class="fa fa-angle-left"></i>
-						</button>
+					<div class="o-agenda__header-actions">
+						<div class="a-input has-icon-right u-visible-xs-sm">
+							<div class="a-input__wrapper">
+								<select name="switcher" id="switcher">
+									<option value="day">Dag</option>
+									<option value="week">Week</option>
+									<option value="month">Maand</option>
+								</select>
+								<span class="fa fa-angle-down"></span>
+							</div>
+						</div>
 
-						<button tabindex="0" type="button" aria-label="today" class="a-button">
-							Vandaag
-						</button>
+						<div class="m-button-group u-hidden-xs-sm">
+							<button class="a-button is-active">
+								Dag
+							</button>
 
-						<button tabindex="0" type="button" aria-label="next month" class="o-agenda__nav-next a-button has-icon">
-							<i class="fa fa-angle-right"></i>
-						</button>
+							<button class="a-button">
+								Week
+							</button>
+
+							<button class="a-button">
+								Maand
+							</button>
+						</div>
+
+						<div class="m-button-group">
+							<button tabindex="-1" type="button" aria-label="previous day" class="o-agenda__nav-previous a-button has-icon u-hidden-xs-sm">
+								<i class="fa fa-angle-left"></i>
+							</button>
+
+							<button tabindex="0" type="button" aria-label="today" class="a-button">
+								Vandaag
+							</button>
+
+							<button tabindex="0" type="button" aria-label="next month" class="o-agenda__nav-next a-button has-icon u-hidden-xs-sm">
+								<i class="fa fa-angle-right"></i>
+							</button>
+						</div>
 					</div>
 				</div>
 
@@ -737,6 +1049,12 @@
 					<div class="o-agenda__table">
 						<div class="o-agenda__table-head">
 							<div class="o-agenda__table-head-cell">Ma</div>
+							<div class="o-agenda__table-head-cell">Di</div>
+							<div class="o-agenda__table-head-cell">Wo</div>
+							<div class="o-agenda__table-head-cell">Do</div>
+							<div class="o-agenda__table-head-cell">Vr</div>
+							<div class="o-agenda__table-head-cell">Za</div>
+							<div class="o-agenda__table-head-cell">Zo</div>
 						</div>
 
 						<div class="o-agenda__table-grid">
@@ -803,42 +1121,10 @@
 									</span>
 								</div>
 
-								<button class="a-event" style="left: calc(0% + 4px); top: 28px; width: calc(14.2857% - 8px);">
-									<div class="a-event__bar" style="background-color: #E20E49;"></div>
-
+								<button class="a-event a-event--light" style="left: calc(28.5714% + 4px); top: 28px; width: calc(14.2857% - 8px); background-color: #6CC24A;">
 									<div class="a-event__content">
 										<div class="a-event__main">
-											<span class="a-event__title">Status interactieve agenda</span>
-										</div>
-
-										<div class="a-event__extra">
-											<span class="a-event__meta">08:00</span>
-										</div>
-									</div>
-								</button>
-
-								<button class="a-event" style="left: calc(28.5714% + 4px); top: 28px; width: calc(14.2857% - 8px);">
-									<div class="a-event__bar" style="background-color: #E20E49;"></div>
-
-									<div class="a-event__content">
-										<div class="a-event__main">
-											<span class="a-event__title">Status interactieve agenda</span>
-										</div>
-
-										<div class="a-event__extra">
-											<span class="a-event__meta">08:00</span>
-										</div>
-									</div>
-								</button>
-
-								<button class="a-event a-event--light" style="left: calc(14.2857% + 4px); top: 56px; width: calc(57.1429% - 8px); background-color: #E20E49;">
-									<div class="a-event__content">
-										<div class="a-event__main">
-											<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Gewerkte uren - 8u00</span>
-										</div>
-
-										<div class="a-event__extra">
-											<i class="a-event__icon fa fa-bicycle"></i>
+											<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Evenement</span>
 										</div>
 									</div>
 								</button>
@@ -855,7 +1141,7 @@
 									</div>
 								</div>
 
-								<div class="o-agenda__table-row-cell">
+								<div class="o-agenda__table-row-cell is-current">
 									<span class="o-agenda__table-row-cell-header">
 										<span>9</span>
 									</span>
@@ -865,7 +1151,7 @@
 									</div>
 								</div>
 
-								<div class="o-agenda__table-row-cell is-selected">
+								<div class="o-agenda__table-row-cell">
 									<span class="o-agenda__table-row-cell-header">
 										<span>10</span>
 									</span>
@@ -875,7 +1161,7 @@
 									</div>
 								</div>
 
-								<div class="o-agenda__table-row-cell is-selected">
+								<div class="o-agenda__table-row-cell">
 									<span class="o-agenda__table-row-cell-header">
 										<span>11</span>
 									</span>
@@ -885,7 +1171,7 @@
 									</div>
 								</div>
 
-								<div class="o-agenda__table-row-cell is-selected">
+								<div class="o-agenda__table-row-cell">
 									<span class="o-agenda__table-row-cell-header">
 										<span>12</span>
 									</span>
@@ -911,42 +1197,10 @@
 									</span>
 								</div>
 
-								<button class="a-event" style="left: calc(0% + 4px); top: 28px; width: calc(14.2857% - 8px);">
-									<div class="a-event__bar" style="background-color: #E20E49;"></div>
-
+								<button class="a-event a-event--light" style="left: calc(57.1428571429% + 4px); top: 28px; width: calc(14.2857% - 8px); background-color: #D8D8D8;">
 									<div class="a-event__content">
 										<div class="a-event__main">
-											<span class="a-event__title">Status interactieve agenda</span>
-										</div>
-
-										<div class="a-event__extra">
-											<span class="a-event__meta">08:00</span>
-										</div>
-									</div>
-								</button>
-
-								<button class="a-event" style="left: calc(28.5714% + 4px); top: 28px; width: calc(14.2857% - 8px);">
-									<div class="a-event__bar" style="background-color: #E20E49;"></div>
-
-									<div class="a-event__content">
-										<div class="a-event__main">
-											<span class="a-event__title">Status interactieve agenda</span>
-										</div>
-
-										<div class="a-event__extra">
-											<span class="a-event__meta">08:00</span>
-										</div>
-									</div>
-								</button>
-
-								<button class="a-event a-event--light" style="left: calc(14.2857% + 4px); top: 56px; width: calc(57.1429% - 8px); background-color: #E20E49;">
-									<div class="a-event__content">
-										<div class="a-event__main">
-											<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Gewerkte uren - 8u00</span>
-										</div>
-
-										<div class="a-event__extra">
-											<i class="a-event__icon fa fa-bicycle"></i>
+											<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Evenement</span>
 										</div>
 									</div>
 								</button>
@@ -974,7 +1228,7 @@
 									</div>
 								</div>
 
-								<div class="o-agenda__table-row-cell is-current">
+								<div class="o-agenda__table-row-cell">
 									<span class="o-agenda__table-row-cell-header">
 										<span>17</span>
 									</span>
@@ -1019,42 +1273,18 @@
 									</span>
 								</div>
 
-								<button class="a-event" style="left: calc(0% + 4px); top: 28px; width: calc(14.2857% - 8px);">
-									<div class="a-event__bar" style="background-color: #E20E49;"></div>
-
+								<button class="a-event a-event--light" style="left: calc(14.2857% + 4px); top: 28px; width: calc(57.1429% - 8px); background-color: #F18A00;">
 									<div class="a-event__content">
 										<div class="a-event__main">
-											<span class="a-event__title">Status interactieve agenda</span>
-										</div>
-
-										<div class="a-event__extra">
-											<span class="a-event__meta">08:00</span>
+											<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Evenement</span>
 										</div>
 									</div>
 								</button>
 
-								<button class="a-event" style="left: calc(28.5714% + 4px); top: 28px; width: calc(14.2857% - 8px);">
-									<div class="a-event__bar" style="background-color: #E20E49;"></div>
-
+								<button class="a-event a-event--light" style="left: calc(28.5714% + 4px); top: 56px; width: calc(14.2857% - 8px); background-color: #6CC24A;">
 									<div class="a-event__content">
 										<div class="a-event__main">
-											<span class="a-event__title">Status interactieve agenda</span>
-										</div>
-
-										<div class="a-event__extra">
-											<span class="a-event__meta">08:00</span>
-										</div>
-									</div>
-								</button>
-
-								<button class="a-event a-event--light" style="left: calc(14.2857% + 4px); top: 56px; width: calc(57.1429% - 8px); background-color: #E20E49;">
-									<div class="a-event__content">
-										<div class="a-event__main">
-											<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Gewerkte uren - 8u00</span>
-										</div>
-
-										<div class="a-event__extra">
-											<i class="a-event__icon fa fa-bicycle"></i>
+											<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Evenement</span>
 										</div>
 									</div>
 								</button>
@@ -1093,13 +1323,13 @@
 									</div>
 								</div>
 
-								<div class="o-agenda__table-row-cell">
+								<div class="o-agenda__table-row-cell is-selected">
 									<span class="o-agenda__table-row-cell-header">
 										<span>25</span>
 									</span>
 								</div>
 
-								<div class="o-agenda__table-row-cell">
+								<div class="o-agenda__table-row-cell is-selected">
 									<span class="o-agenda__table-row-cell-header">
 										<span>26</span>
 									</span>
@@ -1116,46 +1346,6 @@
 										<span>28</span>
 									</span>
 								</div>
-
-								<button class="a-event" style="left: calc(0% + 4px); top: 28px; width: calc(14.2857% - 8px);">
-									<div class="a-event__bar" style="background-color: #E20E49;"></div>
-
-									<div class="a-event__content">
-										<div class="a-event__main">
-											<span class="a-event__title">Status interactieve agenda</span>
-										</div>
-
-										<div class="a-event__extra">
-											<span class="a-event__meta">08:00</span>
-										</div>
-									</div>
-								</button>
-
-								<button class="a-event" style="left: calc(28.5714% + 4px); top: 28px; width: calc(14.2857% - 8px);">
-									<div class="a-event__bar" style="background-color: #E20E49;"></div>
-
-									<div class="a-event__content">
-										<div class="a-event__main">
-											<span class="a-event__title">Status interactieve agenda</span>
-										</div>
-
-										<div class="a-event__extra">
-											<span class="a-event__meta">08:00</span>
-										</div>
-									</div>
-								</button>
-
-								<button class="a-event a-event--light" style="left: calc(14.2857% + 4px); top: 56px; width: calc(57.1429% - 8px); background-color: #E20E49;">
-									<div class="a-event__content">
-										<div class="a-event__main">
-											<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Gewerkte uren - 8u00</span>
-										</div>
-
-										<div class="a-event__extra">
-											<i class="a-event__icon fa fa-bicycle"></i>
-										</div>
-									</div>
-								</button>
 							</div>
 
 							<div class="o-agenda__table-row">
@@ -1201,42 +1391,10 @@
 									</span>
 								</div>
 
-								<button class="a-event" style="left: calc(0% + 4px); top: 28px; width: calc(14.2857% - 8px);">
-									<div class="a-event__bar" style="background-color: #E20E49;"></div>
-
+								<button class="a-event a-event--light" style="left: calc(0% + 4px); top: 28px; width: calc(14.2857% - 8px); background-color: #D8D8D8;">
 									<div class="a-event__content">
 										<div class="a-event__main">
-											<span class="a-event__title">Status interactieve agenda</span>
-										</div>
-
-										<div class="a-event__extra">
-											<span class="a-event__meta">08:00</span>
-										</div>
-									</div>
-								</button>
-
-								<button class="a-event" style="left: calc(28.5714% + 4px); top: 28px; width: calc(14.2857% - 8px);">
-									<div class="a-event__bar" style="background-color: #E20E49;"></div>
-
-									<div class="a-event__content">
-										<div class="a-event__main">
-											<span class="a-event__title">Status interactieve agenda</span>
-										</div>
-
-										<div class="a-event__extra">
-											<span class="a-event__meta">08:00</span>
-										</div>
-									</div>
-								</button>
-
-								<button class="a-event a-event--light" style="left: calc(14.2857% + 4px); top: 56px; width: calc(57.1429% - 8px); background-color: #E20E49;">
-									<div class="a-event__content">
-										<div class="a-event__main">
-											<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Gewerkte uren - 8u00</span>
-										</div>
-
-										<div class="a-event__extra">
-											<i class="a-event__icon fa fa-bicycle"></i>
+											<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Evenement</span>
 										</div>
 									</div>
 								</button>
