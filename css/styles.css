@@ -959,13 +959,13 @@
  * EVENT MODIFIERS
  * -------------------------------------------------------------------
  */
-.a-event__large {
+.a-event--large {
   height: 2.25rem; }
-  .a-event__large .a-event__bar,
-  .a-event__large .a-event__content {
+  .a-event--large .a-event__bar,
+  .a-event--large .a-event__content {
     height: 2.25rem; }
-  .a-event__large .a-event__main > *,
-  .a-event__large .a-event__extra > * {
+  .a-event--large .a-event__main > *,
+  .a-event--large .a-event__extra > * {
     line-height: 2.25rem; }
 
 .a-event--light {
