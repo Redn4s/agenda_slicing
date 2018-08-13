@@ -690,6 +690,8 @@
     @media screen and (min-width: 30rem) {
       .o-agenda__header-actions > *:not(:last-child) {
         margin-right: 1.5rem; } }
+  .o-agenda__header-actions .a-button.is-active {
+    background-color: #005599; }
 
 /**
  * AGENDA BODY

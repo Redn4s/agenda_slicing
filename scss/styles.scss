@@ -114,6 +114,10 @@ $agenda-unavailable-bg:          $agenda-bg !default;
 			margin-right: $spacer;
 		}
 	}
+
+	.a-button.is-active {
+		background-color: mix($brand-primary, $black, 85%);
+	}
 }
 
 
