@@ -782,15 +782,19 @@
 .o-agenda__table-row {
   position: relative;
   display: flex;
-  flex-grow: 1; }
+  flex-grow: 1;
+  /* .a-event {
+
+		@include to($screen-sm) {
+			display: none;
+		}
+
+		@include at($screen-sm) {
+			position: absolute;
+		}
+	} */ }
   .o-agenda__table-row + .o-agenda__table-row {
     border-top: 1px solid #d8d8d8; }
-  @media screen and (max-width: 45rem) {
-    .o-agenda__table-row .a-event {
-      display: none; } }
-  @media screen and (min-width: 45rem) {
-    .o-agenda__table-row .a-event {
-      position: absolute; } }
 
 .o-agenda__table-row-cell {
   position: relative;

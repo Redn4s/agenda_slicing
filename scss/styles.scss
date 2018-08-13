@@ -253,7 +253,7 @@ $agenda-unavailable-bg:          $agenda-bg !default;
 		border-top: 1px solid $agenda-border;
 	}
 
-	.a-event {
+	/* .a-event {
 
 		@include to($screen-sm) {
 			display: none;
@@ -262,7 +262,7 @@ $agenda-unavailable-bg:          $agenda-bg !default;
 		@include at($screen-sm) {
 			position: absolute;
 		}
-	}
+	} */
 }
 
 .o-agenda__table-row-cell {
