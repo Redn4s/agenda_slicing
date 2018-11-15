@@ -1,0 +1,1920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<link rel="stylesheet" href="https://cdn.antwerpen.be/core_branding_scss/2.2.0/main.min.css" />
+	<link rel="stylesheet" href="../css/styles.css" />
+
+	<title>Agenda Slicing</title>
+
+	<meta name="description" content="Agenda Slicing" />
+	<meta name="robots" content="noodp, noydir" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+	<meta name="format-detection" content="telephone=no" />
+
+</head>
+<body style="padding: 24px;">
+
+	<h4 class="u-margin-bottom">Agenda</h4>
+
+	<!-- ### DAY VIEW ### -->
+
+	<div class="o-agenda-wrapper">
+		<div class="o-agenda">
+			<div class="o-agenda__inner">
+				<div class="o-agenda__header">
+					<h5 class="o-agenda__header-title">1 januari 2018</h5>
+
+					<div class="o-agenda__header-actions">
+						<div class="a-input has-icon-right u-visible-xs-sm">
+							<div class="a-input__wrapper">
+								<select name="switcher" id="switcher">
+									<option value="day">Dag</option>
+									<option value="week">Week</option>
+									<option value="month">Maand</option>
+								</select>
+								<span class="fa fa-angle-down"></span>
+							</div>
+						</div>
+
+						<div class="m-button-group u-hidden-xs-sm">
+							<button class="a-button is-active">
+								Dag
+							</button>
+
+							<button class="a-button">
+								Week
+							</button>
+
+							<button class="a-button">
+								Maand
+							</button>
+						</div>
+
+						<div class="m-button-group">
+							<button tabindex="-1" type="button" aria-label="previous day" class="o-agenda__nav-previous a-button has-icon u-hidden-xs-sm">
+								<i class="fa fa-angle-left"></i>
+							</button>
+
+							<button tabindex="0" type="button" aria-label="today" class="a-button">
+								Vandaag
+							</button>
+
+							<button tabindex="0" type="button" aria-label="next day" class="o-agenda__nav-next a-button has-icon u-hidden-xs-sm">
+								<i class="fa fa-angle-right"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="o-agenda__body">
+					<div class="o-agenda__body-row">
+						<div class="o-agenda__sidebar">
+							<div class="o-agenda__sidebar-cell">
+								<span class="o-agenda__sidebar-cell-header">00:00</span>
+							</div>
+						</div>
+
+						<div class="o-agenda__table">
+							<div class="o-agenda__table-head">
+								<div class="o-agenda__table-head-cell">Maandag</div>
+							</div>
+
+							<div class="o-agenda__table-grid">
+								<div class="o-agenda__table-row">
+									<div class="o-agenda__table-row-cell">
+										<span class="o-agenda__table-row-cell-header">
+											<span>1</span>
+										</span>
+									</div>
+
+									<div class="a-event a-event--light" style="position: absolute; left: calc(0% + 4px); top: 28px; width: calc(100% - 8px); background-color: #F18A00;">
+										<div class="a-event__content">
+											<div class="a-event__main">
+												<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Evenement</span>
+											</div>
+										</div>
+									</div>
+
+									<div class="a-event a-event--light" style="position: absolute; left: calc(0% + 4px); top: 56px; width: calc(100% - 8px); background-color: #6CC24A;">
+										<div class="a-event__content">
+											<div class="a-event__main">
+												<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Evenement</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="o-agenda__body-row">
+						<div class="o-agenda__sidebar">
+							<div class="o-agenda__sidebar-cell">
+								<span class="o-agenda__sidebar-cell-header">00:00</span>
+							</div>
+
+							<div class="o-agenda__sidebar-cell">
+								<span class="o-agenda__sidebar-cell-header">01:00</span>
+							</div>
+
+							<div class="o-agenda__sidebar-cell">
+								<span class="o-agenda__sidebar-cell-header">02:00</span>
+							</div>
+
+							<div class="o-agenda__sidebar-cell">
+								<span class="o-agenda__sidebar-cell-header">03:00</span>
+							</div>
+
+							<div class="o-agenda__sidebar-cell">
+								<span class="o-agenda__sidebar-cell-header">04:00</span>
+							</div>
+
+							<div class="o-agenda__sidebar-cell">
+								<span class="o-agenda__sidebar-cell-header">05:00</span>
+							</div>
+
+							<div class="o-agenda__sidebar-cell">
+								<span class="o-agenda__sidebar-cell-header">06:00</span>
+							</div>
+
+							<div class="o-agenda__sidebar-cell">
+								<span class="o-agenda__sidebar-cell-header">07:00</span>
+							</div>
+
+							<div class="o-agenda__sidebar-cell">
+								<span class="o-agenda__sidebar-cell-header">08:00</span>
+							</div>
+
+							<div class="o-agenda__sidebar-cell">
+								<span class="o-agenda__sidebar-cell-header">09:00</span>
+							</div>
+
+							<div class="o-agenda__sidebar-cell">
+								<span class="o-agenda__sidebar-cell-header">10:00</span>
+							</div>
+
+							<div class="o-agenda__sidebar-cell">
+								<span class="o-agenda__sidebar-cell-header">11:00</span>
+							</div>
+
+							<div class="o-agenda__sidebar-cell">
+								<span class="o-agenda__sidebar-cell-header">12:00</span>
+							</div>
+
+							<div class="o-agenda__sidebar-cell">
+								<span class="o-agenda__sidebar-cell-header">13:00</span>
+							</div>
+
+							<div class="o-agenda__sidebar-cell">
+								<span class="o-agenda__sidebar-cell-header">14:00</span>
+							</div>
+
+							<div class="o-agenda__sidebar-cell">
+								<span class="o-agenda__sidebar-cell-header">15:00</span>
+							</div>
+
+							<div class="o-agenda__sidebar-cell">
+								<span class="o-agenda__sidebar-cell-header">16:00</span>
+							</div>
+
+							<div class="o-agenda__sidebar-cell">
+								<span class="o-agenda__sidebar-cell-header">17:00</span>
+							</div>
+
+							<div class="o-agenda__sidebar-cell">
+								<span class="o-agenda__sidebar-cell-header">18:00</span>
+							</div>
+
+							<div class="o-agenda__sidebar-cell">
+								<span class="o-agenda__sidebar-cell-header">19:00</span>
+							</div>
+
+							<div class="o-agenda__sidebar-cell">
+								<span class="o-agenda__sidebar-cell-header">20:00</span>
+							</div>
+
+							<div class="o-agenda__sidebar-cell">
+								<span class="o-agenda__sidebar-cell-header">21:00</span>
+							</div>
+
+							<div class="o-agenda__sidebar-cell">
+								<span class="o-agenda__sidebar-cell-header">22:00</span>
+							</div>
+
+							<div class="o-agenda__sidebar-cell">
+								<span class="o-agenda__sidebar-cell-header">23:00</span>
+							</div>
+						</div>
+
+						<div class="o-agenda__columns">
+							<div class="o-agenda__column">
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell is-selected"></div>
+								<div class="o-agenda__column-cell is-selected"></div>
+								<div class="o-agenda__column-cell is-selected"></div>
+								<div class="o-agenda__column-cell is-selected"></div>
+								<div class="o-agenda__column-cell is-selected"></div>
+								<div class="o-agenda__column-cell is-selected"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+
+								<div class="a-event a-event--light" style="position: absolute; top: 384px; height: 192px; background-color: #D8D8D8;">
+									<div class="a-event__content">
+										<div class="a-event__main">
+											<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Evenement</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="a-event a-event--light" style="position: absolute; top: 624px; height: 192px; width: 50%; background-color: #6CC24A;">
+									<div class="a-event__content">
+										<div class="a-event__main">
+											<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Evenement</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="a-event a-event--light" style="position: absolute; top: 624px; height: 192px; width: 50%; left: 50%; background-color: #F18A00;">
+									<div class="a-event__content">
+										<div class="a-event__main">
+											<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Evenement</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+	<!-- ### WEEK VIEW ### -->
+
+	<div class="o-agenda-wrapper">
+		<div class="o-agenda">
+			<div class="o-agenda__inner">
+				<div class="o-agenda__header">
+					<h5 class="o-agenda__header-title">Januari - februari 2018</h5>
+
+					<div class="o-agenda__header-actions">
+						<div class="a-input has-icon-right u-visible-xs-sm">
+							<div class="a-input__wrapper">
+								<select name="switcher" id="switcher">
+									<option value="day">Dag</option>
+									<option value="week">Week</option>
+									<option value="month">Maand</option>
+								</select>
+								<span class="fa fa-angle-down"></span>
+							</div>
+						</div>
+
+						<div class="m-button-group u-hidden-xs-sm">
+							<button class="a-button">
+								Dag
+							</button>
+
+							<button class="a-button is-active">
+								Week
+							</button>
+
+							<button class="a-button">
+								Maand
+							</button>
+						</div>
+
+						<div class="m-button-group">
+							<button tabindex="-1" type="button" aria-label="previous week" class="o-agenda__nav-previous a-button has-icon u-hidden-xs-sm">
+								<i class="fa fa-angle-left"></i>
+							</button>
+
+							<button tabindex="0" type="button" aria-label="today" class="a-button">
+								Vandaag
+							</button>
+
+							<button tabindex="0" type="button" aria-label="next week" class="o-agenda__nav-next a-button has-icon u-hidden-xs-sm">
+								<i class="fa fa-angle-right"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="o-agenda__body">
+					<div class="o-agenda__body-row">
+						<div class="o-agenda__sidebar">
+							<div class="o-agenda__sidebar-cell">
+								<span class="o-agenda__sidebar-cell-header">00:00</span>
+							</div>
+						</div>
+
+						<div class="o-agenda__table">
+							<div class="o-agenda__table-head">
+								<div class="o-agenda__table-head-cell">Ma</div>
+								<div class="o-agenda__table-head-cell">Di</div>
+								<div class="o-agenda__table-head-cell">Wo</div>
+								<div class="o-agenda__table-head-cell">Do</div>
+								<div class="o-agenda__table-head-cell">Vr</div>
+								<div class="o-agenda__table-head-cell">Za</div>
+								<div class="o-agenda__table-head-cell">Zo</div>
+							</div>
+
+							<div class="o-agenda__table-grid">
+								<div class="o-agenda__table-row">
+									<div class="o-agenda__table-row-cell">
+										<span class="o-agenda__table-row-cell-header">
+											<span>1</span>
+										</span>
+									</div>
+
+									<div class="o-agenda__table-row-cell">
+										<span class="o-agenda__table-row-cell-header">
+											<span>2</span>
+										</span>
+									</div>
+
+									<div class="o-agenda__table-row-cell">
+										<span class="o-agenda__table-row-cell-header">
+											<span>3</span>
+										</span>
+									</div>
+
+									<div class="o-agenda__table-row-cell">
+										<span class="o-agenda__table-row-cell-header">
+											<span>4</span>
+										</span>
+									</div>
+
+									<div class="o-agenda__table-row-cell">
+										<span class="o-agenda__table-row-cell-header">
+											<span>5</span>
+										</span>
+									</div>
+
+									<div class="o-agenda__table-row-cell is-unavailable">
+										<span class="o-agenda__table-row-cell-header">
+											<span>6</span>
+										</span>
+									</div>
+
+									<div class="o-agenda__table-row-cell is-unavailable">
+										<span class="o-agenda__table-row-cell-header">
+											<span>7</span>
+										</span>
+									</div>
+
+									<div class="a-event a-event--light" style="position: absolute; left: calc(0% + 4px); top: 28px; width: calc(14.2857% - 8px); background-color: #D8D8D8;">
+										<div class="a-event__content">
+											<div class="a-event__main">
+												<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Evenement</span>
+											</div>
+										</div>
+									</div>
+
+									<div class="a-event a-event--light" style="position: absolute; left: calc(28.5714% + 4px); top: 28px; width: calc(14.2857% - 8px); background-color: #6CC24A;">
+										<div class="a-event__content">
+											<div class="a-event__main">
+												<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Evenement</span>
+											</div>
+										</div>
+									</div>
+
+									<div class="a-event a-event--light" style="position: absolute; left: calc(14.2857% + 4px); top: 56px; width: calc(57.1429% - 8px); background-color: #F18A00;">
+										<div class="a-event__content">
+											<div class="a-event__main">
+												<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Evenement</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="o-agenda__body-row">
+						<div class="o-agenda__sidebar">
+							<div class="o-agenda__sidebar-cell">
+								<span class="o-agenda__sidebar-cell-header">00:00</span>
+							</div>
+
+							<div class="o-agenda__sidebar-cell">
+								<span class="o-agenda__sidebar-cell-header">01:00</span>
+							</div>
+
+							<div class="o-agenda__sidebar-cell">
+								<span class="o-agenda__sidebar-cell-header">02:00</span>
+							</div>
+
+							<div class="o-agenda__sidebar-cell">
+								<span class="o-agenda__sidebar-cell-header">03:00</span>
+							</div>
+
+							<div class="o-agenda__sidebar-cell">
+								<span class="o-agenda__sidebar-cell-header">04:00</span>
+							</div>
+
+							<div class="o-agenda__sidebar-cell">
+								<span class="o-agenda__sidebar-cell-header">05:00</span>
+							</div>
+
+							<div class="o-agenda__sidebar-cell">
+								<span class="o-agenda__sidebar-cell-header">06:00</span>
+							</div>
+
+							<div class="o-agenda__sidebar-cell">
+								<span class="o-agenda__sidebar-cell-header">07:00</span>
+							</div>
+
+							<div class="o-agenda__sidebar-cell">
+								<span class="o-agenda__sidebar-cell-header">08:00</span>
+							</div>
+
+							<div class="o-agenda__sidebar-cell">
+								<span class="o-agenda__sidebar-cell-header">09:00</span>
+							</div>
+
+							<div class="o-agenda__sidebar-cell">
+								<span class="o-agenda__sidebar-cell-header">10:00</span>
+							</div>
+
+							<div class="o-agenda__sidebar-cell">
+								<span class="o-agenda__sidebar-cell-header">11:00</span>
+							</div>
+
+							<div class="o-agenda__sidebar-cell">
+								<span class="o-agenda__sidebar-cell-header">12:00</span>
+							</div>
+
+							<div class="o-agenda__sidebar-cell">
+								<span class="o-agenda__sidebar-cell-header">13:00</span>
+							</div>
+
+							<div class="o-agenda__sidebar-cell">
+								<span class="o-agenda__sidebar-cell-header">14:00</span>
+							</div>
+
+							<div class="o-agenda__sidebar-cell">
+								<span class="o-agenda__sidebar-cell-header">15:00</span>
+							</div>
+
+							<div class="o-agenda__sidebar-cell">
+								<span class="o-agenda__sidebar-cell-header">16:00</span>
+							</div>
+
+							<div class="o-agenda__sidebar-cell">
+								<span class="o-agenda__sidebar-cell-header">17:00</span>
+							</div>
+
+							<div class="o-agenda__sidebar-cell">
+								<span class="o-agenda__sidebar-cell-header">18:00</span>
+							</div>
+
+							<div class="o-agenda__sidebar-cell">
+								<span class="o-agenda__sidebar-cell-header">19:00</span>
+							</div>
+
+							<div class="o-agenda__sidebar-cell">
+								<span class="o-agenda__sidebar-cell-header">20:00</span>
+							</div>
+
+							<div class="o-agenda__sidebar-cell">
+								<span class="o-agenda__sidebar-cell-header">21:00</span>
+							</div>
+
+							<div class="o-agenda__sidebar-cell">
+								<span class="o-agenda__sidebar-cell-header">22:00</span>
+							</div>
+
+							<div class="o-agenda__sidebar-cell">
+								<span class="o-agenda__sidebar-cell-header">23:00</span>
+							</div>
+						</div>
+
+						<div class="o-agenda__columns">
+							<div class="o-agenda__column">
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+
+								<div class="a-event a-event--light" style="position: absolute; top: 264px; height: 192px; width: calc(100% / 3); background-color: #F18A00;">
+									<div class="a-event__content">
+										<div class="a-event__main">
+											<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Evenement</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="a-event a-event--light" style="position: absolute; top: 312px; height: 192px; width: calc(100% / 3); left: calc(100% / 3); background-color: #D8D8D8;">
+									<div class="a-event__content">
+										<div class="a-event__main">
+											<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Evenement</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="a-event a-event--light" style="position: absolute; top: 312px; height: 120px; width: calc(100% / 3); left: calc(100% / 3 * 2); background-color: #6CC24A;">
+									<div class="a-event__content">
+										<div class="a-event__main">
+											<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Evenement</span>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="o-agenda__column">
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell is-selected"></div>
+								<div class="o-agenda__column-cell is-selected"></div>
+								<div class="o-agenda__column-cell is-selected"></div>
+								<div class="o-agenda__column-cell is-selected"></div>
+								<div class="o-agenda__column-cell is-selected"></div>
+								<div class="o-agenda__column-cell is-selected"></div>
+								<div class="o-agenda__column-cell is-selected"></div>
+								<div class="o-agenda__column-cell is-selected"></div>
+								<div class="o-agenda__column-cell is-selected"></div>
+								<div class="o-agenda__column-cell is-selected"></div>
+								<div class="o-agenda__column-cell is-selected"></div>
+								<div class="o-agenda__column-cell is-selected"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+							</div>
+
+							<div class="o-agenda__column">
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+
+								<div class="a-event a-event--light" style="position: absolute; top: 384px; height: 192px; background-color: #D8D8D8;">
+									<div class="a-event__content">
+										<div class="a-event__main">
+											<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Evenement</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="a-event a-event--light" style="position: absolute; top: 624px; height: 192px; width: 50%; background-color: #6CC24A;">
+									<div class="a-event__content">
+										<div class="a-event__main">
+											<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Evenement</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="a-event a-event--light" style="position: absolute; top: 624px; height: 192px; width: 50%; left: 50%; background-color: #F18A00;">
+									<div class="a-event__content">
+										<div class="a-event__main">
+											<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Evenement</span>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="o-agenda__column">
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+							</div>
+
+							<div class="o-agenda__column">
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+
+								<div class="a-event a-event--light" style="position: absolute; top: 240px; height: 240px; background-color: #6CC24A;">
+									<div class="a-event__content">
+										<div class="a-event__main">
+											<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Evenement</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="a-event a-event--light" style="position: absolute; top: 672px; height: 120px; background-color: #D8D8D8;">
+									<div class="a-event__content">
+										<div class="a-event__main">
+											<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Evenement</span>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="o-agenda__column">
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+							</div>
+
+							<div class="o-agenda__column">
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+								<div class="o-agenda__column-cell"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+	<!-- ### MONTH VIEW ### -->
+
+	<div class="o-agenda-wrapper">
+		<div class="o-agenda">
+			<div class="o-agenda__inner">
+				<div class="o-agenda__header">
+					<h5 class="o-agenda__header-title">Januari 2018</h5>
+
+					<div class="o-agenda__header-actions">
+						<div class="a-input has-icon-right u-visible-xs-sm">
+							<div class="a-input__wrapper">
+								<select name="switcher" id="switcher">
+									<option value="day">Dag</option>
+									<option value="week">Week</option>
+									<option value="month">Maand</option>
+								</select>
+								<span class="fa fa-angle-down"></span>
+							</div>
+						</div>
+
+						<div class="m-button-group u-hidden-xs-sm">
+							<button class="a-button">
+								Dag
+							</button>
+
+							<button class="a-button">
+								Week
+							</button>
+
+							<button class="a-button is-active">
+								Maand
+							</button>
+						</div>
+
+						<div class="m-button-group">
+							<button tabindex="-1" type="button" aria-label="previous day" class="o-agenda__nav-previous a-button has-icon u-hidden-xs-sm">
+								<i class="fa fa-angle-left"></i>
+							</button>
+
+							<button tabindex="0" type="button" aria-label="today" class="a-button">
+								Vandaag
+							</button>
+
+							<button tabindex="0" type="button" aria-label="next month" class="o-agenda__nav-next a-button has-icon u-hidden-xs-sm">
+								<i class="fa fa-angle-right"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="o-agenda__body">
+					<div class="o-agenda__table">
+						<div class="o-agenda__table-head">
+							<div class="o-agenda__table-head-cell">Ma</div>
+							<div class="o-agenda__table-head-cell">Di</div>
+							<div class="o-agenda__table-head-cell">Wo</div>
+							<div class="o-agenda__table-head-cell">Do</div>
+							<div class="o-agenda__table-head-cell">Vr</div>
+							<div class="o-agenda__table-head-cell">Za</div>
+							<div class="o-agenda__table-head-cell">Zo</div>
+						</div>
+
+						<div class="o-agenda__table-grid">
+							<div class="o-agenda__table-row is-responsive">
+								<div class="o-agenda__table-row-cell">
+									<span class="o-agenda__table-row-cell-header">
+										<span>1</span>
+									</span>
+
+									<div class="o-agenda__dots">
+										<div class="o-agenda__dot"></div>
+									</div>
+								</div>
+
+								<div class="o-agenda__table-row-cell">
+									<span class="o-agenda__table-row-cell-header">
+										<span>2</span>
+									</span>
+
+									<div class="o-agenda__dots">
+										<div class="o-agenda__dot"></div>
+									</div>
+								</div>
+
+								<div class="o-agenda__table-row-cell">
+									<span class="o-agenda__table-row-cell-header">
+										<span>3</span>
+									</span>
+
+									<div class="o-agenda__dots">
+										<div class="o-agenda__dot"></div>
+									</div>
+								</div>
+
+								<div class="o-agenda__table-row-cell">
+									<span class="o-agenda__table-row-cell-header">
+										<span>4</span>
+									</span>
+
+									<div class="o-agenda__dots">
+										<div class="o-agenda__dot"></div>
+									</div>
+								</div>
+
+								<div class="o-agenda__table-row-cell">
+									<span class="o-agenda__table-row-cell-header">
+										<span>5</span>
+									</span>
+
+									<div class="o-agenda__dots">
+										<div class="o-agenda__dot"></div>
+									</div>
+								</div>
+
+								<div class="o-agenda__table-row-cell is-unavailable">
+									<span class="o-agenda__table-row-cell-header">
+										<span>6</span>
+									</span>
+								</div>
+
+								<div class="o-agenda__table-row-cell is-unavailable">
+									<span class="o-agenda__table-row-cell-header">
+										<span>7</span>
+									</span>
+								</div>
+
+								<div class="a-event a-event--light" style="position: absolute; left: calc(28.5714% + 4px); top: 28px; width: calc(14.2857% - 8px); background-color: #6CC24A;">
+									<div class="a-event__content">
+										<div class="a-event__main">
+											<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Evenement</span>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="o-agenda__table-row is-responsive">
+								<div class="o-agenda__table-row-cell">
+									<span class="o-agenda__table-row-cell-header">
+										<span>8</span>
+									</span>
+
+									<div class="o-agenda__dots">
+										<div class="o-agenda__dot"></div>
+									</div>
+								</div>
+
+								<div class="o-agenda__table-row-cell is-current">
+									<span class="o-agenda__table-row-cell-header">
+										<span>9</span>
+									</span>
+
+									<div class="o-agenda__dots">
+										<div class="o-agenda__dot"></div>
+									</div>
+								</div>
+
+								<div class="o-agenda__table-row-cell">
+									<span class="o-agenda__table-row-cell-header">
+										<span>10</span>
+									</span>
+
+									<div class="o-agenda__dots">
+										<div class="o-agenda__dot"></div>
+									</div>
+								</div>
+
+								<div class="o-agenda__table-row-cell">
+									<span class="o-agenda__table-row-cell-header">
+										<span>11</span>
+									</span>
+
+									<div class="o-agenda__dots">
+										<div class="o-agenda__dot"></div>
+									</div>
+								</div>
+
+								<div class="o-agenda__table-row-cell">
+									<span class="o-agenda__table-row-cell-header">
+										<span>12</span>
+									</span>
+
+									<div class="o-agenda__dots">
+										<div class="o-agenda__dot"></div>
+									</div>
+								</div>
+
+								<div class="o-agenda__table-row-cell is-unavailable">
+									<span class="o-agenda__table-row-cell-header">
+										<span>13</span>
+									</span>
+
+									<div class="o-agenda__dots">
+										<div class="o-agenda__dot"></div>
+									</div>
+								</div>
+
+								<div class="o-agenda__table-row-cell is-unavailable">
+									<span class="o-agenda__table-row-cell-header">
+										<span>14</span>
+									</span>
+								</div>
+
+								<div class="a-event a-event--light" style="position: absolute; left: calc(57.1428571429% + 4px); top: 28px; width: calc(14.2857% - 8px); background-color: #D8D8D8;">
+									<div class="a-event__content">
+										<div class="a-event__main">
+											<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Evenement</span>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="o-agenda__table-row is-responsive">
+								<div class="o-agenda__table-row-cell">
+									<span class="o-agenda__table-row-cell-header">
+										<span>15</span>
+									</span>
+
+									<div class="o-agenda__dots">
+										<div class="o-agenda__dot"></div>
+									</div>
+								</div>
+
+								<div class="o-agenda__table-row-cell">
+									<span class="o-agenda__table-row-cell-header">
+										<span>16</span>
+									</span>
+
+									<div class="o-agenda__dots">
+										<div class="o-agenda__dot"></div>
+										<div class="o-agenda__dot"></div>
+									</div>
+								</div>
+
+								<div class="o-agenda__table-row-cell">
+									<span class="o-agenda__table-row-cell-header">
+										<span>17</span>
+									</span>
+
+									<div class="o-agenda__dots">
+										<div class="o-agenda__dot"></div>
+										<div class="o-agenda__dot"></div>
+									</div>
+								</div>
+
+								<div class="o-agenda__table-row-cell">
+									<span class="o-agenda__table-row-cell-header">
+										<span>18</span>
+									</span>
+
+									<div class="o-agenda__dots">
+										<div class="o-agenda__dot"></div>
+										<div class="o-agenda__dot"></div>
+									</div>
+								</div>
+
+								<div class="o-agenda__table-row-cell">
+									<span class="o-agenda__table-row-cell-header">
+										<span>19</span>
+									</span>
+
+									<div class="o-agenda__dots">
+										<div class="o-agenda__dot"></div>
+										<div class="o-agenda__dot"></div>
+									</div>
+								</div>
+
+								<div class="o-agenda__table-row-cell is-unavailable">
+									<span class="o-agenda__table-row-cell-header">
+										<span>20</span>
+									</span>
+								</div>
+
+								<div class="o-agenda__table-row-cell is-unavailable">
+									<span class="o-agenda__table-row-cell-header">
+										<span>21</span>
+									</span>
+								</div>
+
+								<div class="a-event a-event--light" style="position: absolute; left: calc(14.2857% + 4px); top: 28px; width: calc(57.1429% - 8px); background-color: #F18A00;">
+									<div class="a-event__content">
+										<div class="a-event__main">
+											<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Evenement</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="a-event a-event--light" style="position: absolute; left: calc(28.5714% + 4px); top: 56px; width: calc(14.2857% - 8px); background-color: #6CC24A;">
+									<div class="a-event__content">
+										<div class="a-event__main">
+											<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Evenement</span>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="o-agenda__table-row is-responsive">
+								<div class="o-agenda__table-row-cell">
+									<span class="o-agenda__table-row-cell-header">
+										<span>22</span>
+									</span>
+
+									<div class="o-agenda__dots">
+										<div class="o-agenda__dot"></div>
+										<div class="o-agenda__dot"></div>
+										<div class="o-agenda__dot"></div>
+									</div>
+								</div>
+
+								<div class="o-agenda__table-row-cell">
+									<span class="o-agenda__table-row-cell-header">
+										<span>23</span>
+									</span>
+
+									<div class="o-agenda__dots">
+										<div class="o-agenda__dot"></div>
+									</div>
+								</div>
+
+								<div class="o-agenda__table-row-cell">
+									<span class="o-agenda__table-row-cell-header">
+										<span>24</span>
+									</span>
+
+									<div class="o-agenda__dots">
+										<div class="o-agenda__dot"></div>
+									</div>
+								</div>
+
+								<div class="o-agenda__table-row-cell is-selected">
+									<span class="o-agenda__table-row-cell-header">
+										<span>25</span>
+									</span>
+								</div>
+
+								<div class="o-agenda__table-row-cell is-selected">
+									<span class="o-agenda__table-row-cell-header">
+										<span>26</span>
+									</span>
+								</div>
+
+								<div class="o-agenda__table-row-cell is-unavailable">
+									<span class="o-agenda__table-row-cell-header">
+										<span>27</span>
+									</span>
+								</div>
+
+								<div class="o-agenda__table-row-cell is-unavailable">
+									<span class="o-agenda__table-row-cell-header">
+										<span>28</span>
+									</span>
+								</div>
+							</div>
+
+							<div class="o-agenda__table-row is-responsive">
+								<div class="o-agenda__table-row-cell">
+									<span class="o-agenda__table-row-cell-header">
+										<span>29</span>
+									</span>
+								</div>
+
+								<div class="o-agenda__table-row-cell">
+									<span class="o-agenda__table-row-cell-header">
+										<span>30</span>
+									</span>
+								</div>
+
+								<div class="o-agenda__table-row-cell">
+									<span class="o-agenda__table-row-cell-header">
+										<span>31</span>
+									</span>
+								</div>
+
+								<div class="o-agenda__table-row-cell is-faded">
+									<span class="o-agenda__table-row-cell-header">
+										<span>1</span>
+									</span>
+								</div>
+
+								<div class="o-agenda__table-row-cell is-faded">
+									<span class="o-agenda__table-row-cell-header">
+										<span>2</span>
+									</span>
+								</div>
+
+								<div class="o-agenda__table-row-cell is-faded">
+									<span class="o-agenda__table-row-cell-header">
+										<span>3</span>
+									</span>
+								</div>
+
+								<div class="o-agenda__table-row-cell is-faded">
+									<span class="o-agenda__table-row-cell-header">
+										<span>4</span>
+									</span>
+								</div>
+
+								<div class="a-event a-event--light" style="position: absolute; left: calc(0% + 4px); top: 28px; width: calc(14.2857% - 8px); background-color: #D8D8D8;">
+									<div class="a-event__content">
+										<div class="a-event__main">
+											<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Evenement</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+	<!-- ### SMALL LIGHT EVENTS ### -->
+
+	<h4 class="u-margin-bottom">Kleine/lichte evenementen</h4>
+
+	<p><small>Evenement van/tot</small></p>
+
+	<div class="a-event">
+		<div class="a-event__bar" style="background-color: #DBC52B"></div>
+
+		<div class="a-event__content">
+			<div class="a-event__main">
+				<span class="a-event__title">Status interactieve agenda</span>
+			</div>
+
+			<div class="a-event__extra">
+				<span class="a-event__meta">08:00 tot 12:00</span>
+			</div>
+		</div>
+	</div>
+
+	<hr>
+
+	<p><small>Evenement van/tot met 1 icoon links</small></p>
+
+	<div class="a-event">
+		<div class="a-event__bar" style="background-color: #DBC52B"></div>
+
+		<div class="a-event__content">
+			<div class="a-event__main">
+				<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Status interactieve agenda</span>
+			</div>
+
+			<div class="a-event__extra">
+				<span class="a-event__meta">08:00 tot 12:00</span>
+			</div>
+		</div>
+	</div>
+
+	<hr>
+
+	<p><small>Evenement van/tot met 1 icoon rechts</small></p>
+
+	<div class="a-event">
+		<div class="a-event__bar" style="background-color: #DBC52B"></div>
+
+		<div class="a-event__content">
+			<div class="a-event__main">
+				<span class="a-event__title">Status interactieve agenda</span>
+			</div>
+
+			<div class="a-event__extra">
+				<span class="a-event__meta">08:00 tot 12:00</span><i class="a-event__icon fa fa-bicycle"></i>
+			</div>
+		</div>
+	</div>
+
+	<hr>
+
+	<p><small>Evenement van/tot met 2 iconen</small></p>
+
+	<div class="a-event">
+		<div class="a-event__bar" style="background-color: #DBC52B"></div>
+
+		<div class="a-event__content">
+			<div class="a-event__main">
+				<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Status interactieve agenda</span>
+			</div>
+
+			<div class="a-event__extra">
+				<span class="a-event__meta">08:00 tot 12:00</span><i class="a-event__icon fa fa-bicycle"></i>
+			</div>
+		</div>
+	</div>
+
+	<hr>
+
+	<p><small>Evenement hele dag</small></p>
+
+	<div class="a-event" style="background-color: #DBC52B">
+		<div class="a-event__content">
+			<div class="a-event__main">
+				<span class="a-event__title">CSSConf Berlin</span>
+			</div>
+		</div>
+	</div>
+
+	<hr>
+
+	<p><small>Evenement hele dag met 1 icoon links</small></p>
+
+	<div class="a-event" style="background-color: #DBC52B">
+		<div class="a-event__content">
+			<div class="a-event__main">
+				<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Gewerkte uren - 8u00</span>
+			</div>
+		</div>
+	</div>
+
+	<hr>
+
+	<p><small>Evenement hele dag met 1 icoon rechts</small></p>
+
+	<div class="a-event" style="background-color: #DBC52B">
+		<div class="a-event__content">
+			<div class="a-event__main">
+				<span class="a-event__title">Gewerkte uren - 8u00</span>
+			</div>
+
+			<div class="a-event__extra">
+				<i class="a-event__icon fa fa-bicycle"></i>
+			</div>
+		</div>
+	</div>
+
+	<hr>
+
+	<p><small>Evenement hele dag met 2 iconen</small></p>
+
+	<div class="a-event" style="background-color: #DBC52B">
+		<div class="a-event__content">
+			<div class="a-event__main">
+				<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Gewerkte uren - 8u00</span>
+			</div>
+
+			<div class="a-event__extra">
+				<i class="a-event__icon fa fa-bicycle"></i>
+			</div>
+		</div>
+	</div>
+
+	<hr>
+
+	<!-- ### BIG LIGHT EVENTS ### -->
+
+	<h4 class="u-margin-bottom">Grote/lichte evenementen</h4>
+
+	<p><small>Evenement van/tot</small></p>
+
+	<div class="a-event a-event--large">
+		<div class="a-event__bar" style="background-color: #DBC52B;"></div>
+
+		<div class="a-event__content">
+			<div class="a-event__main">
+				<span class="a-event__title">Status interactieve agenda</span>
+			</div>
+
+			<div class="a-event__extra">
+				<span class="a-event__meta">08:00 tot 12:00</span>
+			</div>
+		</div>
+	</div>
+
+	<hr>
+
+	<p><small>Evenement van/tot met 1 icoon links</small></p>
+
+	<div class="a-event a-event--large">
+		<div class="a-event__bar" style="background-color: #DBC52B;"></div>
+
+		<div class="a-event__content">
+			<div class="a-event__main">
+				<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Status interactieve agenda</span>
+			</div>
+
+			<div class="a-event__extra">
+				<span class="a-event__meta">08:00 tot 12:00</span>
+			</div>
+		</div>
+	</div>
+
+	<hr>
+
+	<p><small>Evenement van/tot met 1 icoon rechts</small></p>
+
+	<div class="a-event a-event--large">
+		<div class="a-event__bar" style="background-color: #DBC52B;"></div>
+
+		<div class="a-event__content">
+			<div class="a-event__main">
+				<span class="a-event__title">Status interactieve agenda</span>
+			</div>
+
+			<div class="a-event__extra">
+				<span class="a-event__meta">08:00 tot 12:00</span><i class="a-event__icon fa fa-bicycle"></i>
+			</div>
+		</div>
+	</div>
+
+	<hr>
+
+	<p><small>Evenement van/tot met 2 iconen</small></p>
+
+	<div class="a-event a-event--large">
+		<div class="a-event__bar" style="background-color: #DBC52B;"></div>
+
+		<div class="a-event__content">
+			<div class="a-event__main">
+				<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Status interactieve agenda</span>
+			</div>
+
+			<div class="a-event__extra">
+				<span class="a-event__meta">08:00 tot 12:00</span><i class="a-event__icon fa fa-bicycle"></i>
+			</div>
+		</div>
+	</div>
+
+	<hr>
+
+	<p><small>Evenement hele dag</small></p>
+
+	<div class="a-event a-event--large a-event--light" style="background-color: #DBC52B;">
+		<div class="a-event__content">
+			<div class="a-event__main">
+				<span class="a-event__title">CSSConf Berlin</span>
+			</div>
+		</div>
+	</div>
+
+	<hr>
+
+	<p><small>Evenement hele dag met 1 icoon links</small></p>
+
+	<div class="a-event a-event--large a-event--light" style="background-color: #DBC52B;">
+		<div class="a-event__content">
+			<div class="a-event__main">
+				<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Gewerkte uren - 8u00</span>
+			</div>
+		</div>
+	</div>
+
+	<hr>
+
+	<p><small>Evenement hele dag met 1 icoon rechts</small></p>
+
+	<div class="a-event a-event--large a-event--light" style="background-color: #DBC52B;">
+		<div class="a-event__content">
+			<div class="a-event__main">
+				<span class="a-event__title">Gewerkte uren - 8u00</span>
+			</div>
+
+			<div class="a-event__extra">
+				<i class="a-event__icon fa fa-bicycle"></i>
+			</div>
+		</div>
+	</div>
+
+	<hr>
+
+	<p><small>Evenement hele dag met 2 iconen</small></p>
+
+	<div class="a-event a-event--large a-event--light" style="background-color: #DBC52B;">
+		<div class="a-event__content">
+			<div class="a-event__main">
+				<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Gewerkte uren - 8u00</span>
+			</div>
+
+			<div class="a-event__extra">
+				<i class="a-event__icon fa fa-bicycle"></i>
+			</div>
+		</div>
+	</div>
+
+	<hr>
+
+	<!-- ### SMALL DARK EVENTS ### -->
+
+	<h4 class="u-margin-bottom">Kleine/donkere evenementen</h4>
+
+	<p><small>Evenement van/tot</small></p>
+
+	<div class="a-event">
+		<div class="a-event__bar" style="background-color: #E20E49;"></div>
+
+		<div class="a-event__content">
+			<div class="a-event__main">
+				<span class="a-event__title">Status interactieve agenda</span>
+			</div>
+
+			<div class="a-event__extra">
+				<span class="a-event__meta">08:00 tot 12:00</span>
+			</div>
+		</div>
+	</div>
+
+	<hr>
+
+	<p><small>Evenement van/tot met 1 icoon links</small></p>
+
+	<div class="a-event">
+		<div class="a-event__bar" style="background-color: #E20E49;"></div>
+
+		<div class="a-event__content">
+			<div class="a-event__main">
+				<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Status interactieve agenda</span>
+			</div>
+
+			<div class="a-event__extra">
+				<span class="a-event__meta">08:00 tot 12:00</span>
+			</div>
+		</div>
+	</div>
+
+	<hr>
+
+	<p><small>Evenement van/tot met 1 icoon rechts</small></p>
+
+	<div class="a-event">
+		<div class="a-event__bar" style="background-color: #E20E49;"></div>
+
+		<div class="a-event__content">
+			<div class="a-event__main">
+				<span class="a-event__title">Status interactieve agenda</span>
+			</div>
+
+			<div class="a-event__extra">
+				<span class="a-event__meta">08:00 tot 12:00</span><i class="a-event__icon fa fa-bicycle"></i>
+			</div>
+		</div>
+	</div>
+
+	<hr>
+
+	<p><small>Evenement van/tot met 2 iconen</small></p>
+
+	<div class="a-event">
+		<div class="a-event__bar" style="background-color: #E20E49;"></div>
+
+		<div class="a-event__content">
+			<div class="a-event__main">
+				<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Status interactieve agenda</span>
+			</div>
+
+			<div class="a-event__extra">
+				<span class="a-event__meta">08:00 tot 12:00</span><i class="a-event__icon fa fa-bicycle"></i>
+			</div>
+		</div>
+	</div>
+
+	<hr>
+
+	<p><small>Evenement hele dag</small></p>
+
+	<div class="a-event a-event--light" style="background-color: #E20E49;">
+		<div class="a-event__content">
+			<div class="a-event__main">
+				<span class="a-event__title">CSSConf Berlin</span>
+			</div>
+		</div>
+	</div>
+
+	<hr>
+
+	<p><small>Evenement hele dag met 1 icoon links</small></p>
+
+	<div class="a-event a-event--light" style="background-color: #E20E49;">
+		<div class="a-event__content">
+			<div class="a-event__main">
+				<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Gewerkte uren - 8u00</span>
+			</div>
+		</div>
+	</div>
+
+	<hr>
+
+	<p><small>Evenement hele dag met 1 icoon rechts</small></p>
+
+	<div class="a-event a-event--light" style="background-color: #E20E49;">
+		<div class="a-event__content">
+			<div class="a-event__main">
+				<span class="a-event__title">Gewerkte uren - 8u00</span>
+			</div>
+
+			<div class="a-event__extra">
+				<i class="a-event__icon fa fa-bicycle"></i>
+			</div>
+		</div>
+	</div>
+
+	<hr>
+
+	<p><small>Evenement hele dag met 2 iconen</small></p>
+
+	<div class="a-event a-event--light" style="background-color: #E20E49;">
+		<div class="a-event__content">
+			<div class="a-event__main">
+				<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Gewerkte uren - 8u00</span>
+			</div>
+
+			<div class="a-event__extra">
+				<i class="a-event__icon fa fa-bicycle"></i>
+			</div>
+		</div>
+	</div>
+
+	<hr>
+
+	<!-- ### BIG DARK EVENTS ### -->
+
+	<h4 class="u-margin-bottom">Grote/donkere evenementen</h4>
+
+	<p><small>Evenement van/tot</small></p>
+
+	<div class="a-event a-event--large">
+		<div class="a-event__bar" style="background-color: #E20E49;"></div>
+
+		<div class="a-event__content">
+			<div class="a-event__main">
+				<span class="a-event__title">Status interactieve agenda</span>
+			</div>
+
+			<div class="a-event__extra">
+				<span class="a-event__meta">08:00 tot 12:00</span>
+			</div>
+		</div>
+	</div>
+
+	<hr>
+
+	<p><small>Evenement van/tot met 1 icoon links</small></p>
+
+	<div class="a-event a-event--large">
+		<div class="a-event__bar" style="background-color: #E20E49;"></div>
+
+		<div class="a-event__content">
+			<div class="a-event__main">
+				<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Status interactieve agenda</span>
+			</div>
+
+			<div class="a-event__extra">
+				<span class="a-event__meta">08:00 tot 12:00</span>
+			</div>
+		</div>
+	</div>
+
+	<hr>
+
+	<p><small>Evenement van/tot met 1 icoon rechts</small></p>
+
+	<div class="a-event a-event--large">
+		<div class="a-event__bar" style="background-color: #E20E49;"></div>
+
+		<div class="a-event__content">
+			<div class="a-event__main">
+				<span class="a-event__title">Status interactieve agenda</span>
+			</div>
+
+			<div class="a-event__extra">
+				<span class="a-event__meta">08:00 tot 12:00</span><i class="a-event__icon fa fa-bicycle"></i>
+			</div>
+		</div>
+	</div>
+
+	<hr>
+
+	<p><small>Evenement van/tot met 2 iconen</small></p>
+
+	<div class="a-event a-event--large">
+		<div class="a-event__bar" style="background-color: #E20E49;"></div>
+
+		<div class="a-event__content">
+			<div class="a-event__main">
+				<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Status interactieve agenda</span>
+			</div>
+
+			<div class="a-event__extra">
+				<span class="a-event__meta">08:00 tot 12:00</span><i class="a-event__icon fa fa-bicycle"></i>
+			</div>
+		</div>
+	</div>
+
+	<hr>
+
+	<p><small>Evenement hele dag</small></p>
+
+	<div class="a-event a-event--large a-event--light" style="background-color: #E20E49;">
+		<div class="a-event__content">
+			<div class="a-event__main">
+				<span class="a-event__title">CSSConf Berlin</span>
+			</div>
+		</div>
+	</div>
+
+	<hr>
+
+	<p><small>Evenement hele dag met 1 icoon links</small></p>
+
+	<div class="a-event a-event--large a-event--light" style="background-color: #E20E49;">
+		<div class="a-event__content">
+			<div class="a-event__main">
+				<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Gewerkte uren - 8u00</span>
+			</div>
+		</div>
+	</div>
+
+	<hr>
+
+	<p><small>Evenement hele dag met 1 icoon rechts</small></p>
+
+	<div class="a-event a-event--large a-event--light" style="background-color: #E20E49;">
+		<div class="a-event__content">
+			<div class="a-event__main">
+				<span class="a-event__title">Gewerkte uren - 8u00</span>
+			</div>
+
+			<div class="a-event__extra">
+				<i class="a-event__icon fa fa-bicycle"></i>
+			</div>
+		</div>
+	</div>
+
+	<hr>
+
+	<p><small>Evenement hele dag met 2 iconen</small></p>
+
+	<div class="a-event a-event--large a-event--light" style="background-color: #E20E49;">
+		<div class="a-event__content">
+			<div class="a-event__main">
+				<i class="a-event__icon fa fa-clock-o"></i><span class="a-event__title">Gewerkte uren - 8u00</span>
+			</div>
+
+			<div class="a-event__extra">
+				<i class="a-event__icon fa fa-bicycle"></i>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
